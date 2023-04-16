@@ -47,10 +47,10 @@ const index = () => {
 
 			<p className={classes.grantText}>
 				Program Mój Prąd jest realizowany przez Ministerstwo Energii, Prawa i
-				Gospodarki.{' '}
+				Gospodarki.
 			</p>
 			<p className={classes.grantText}>
-				Zapraszamy do zapoznania się z szczegółami programu na stronie{' '}
+				Zapraszamy do zapoznania się z szczegółami programu na stronie
 				<Link
 					className={classes.grantLink}
 					href='https://mojprad.gov.pl/'

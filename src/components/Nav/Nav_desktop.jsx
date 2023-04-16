@@ -14,13 +14,13 @@ const Nav_desktop = () => {
 			<ul className={classes.nav_links_desktop}>
 				<li>
 					<Link className={classes.nav_link_desktop} href='/'>
-						{' '}
-						Strona główna{' '}
+					
+						Strona główna
 					</Link>
 				</li>
 				<li className={classes.drop}>
 					<span className={classes.nav_link_desktop} href='/Oferta'>
-						Oferta{' '}
+						Oferta
 					</span>
 					<ul className={classes.hoverMenu}>
 						<li>
@@ -36,7 +36,7 @@ const Nav_desktop = () => {
 				</li>
 				<li>
 					<Link className={classes.nav_link_desktop} href='/galeria'>
-						Galeria{' '}
+						Galeria
 					</Link>
 				</li>
 				<li className={classes.drop}>
