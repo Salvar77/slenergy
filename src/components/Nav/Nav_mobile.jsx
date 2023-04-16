@@ -1,0 +1,62 @@
+import classes from './Nav.module.scss';
+import Link from 'next/link';
+import Hamburger from './Hamburger';
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
+import logo from '@/assets/images/SpeedLightLogoMobile.svg';
+const Nav_mobile = () => {
+	const [isActive, setIsActive] = useState(false);
+	const toggleNav = () => {
+		setIsActive(!isActive);
+	};
+
+	return (
+		<>
+			<div className={classes.nav_container}>
+				<div className={classes.nav_mobile__logo}>
+					<Link href='/'>
+						<Image src={logo} alt='logo' width={200} />
+					</Link>
+				</div>
+				<Hamburger onClick={toggleNav} isActive={isActive} />
+			</div>
+			<AnimatePresence>
+			{isActive && (
+					<motion.nav
+						initial={{ opacity: 0 }}
+						animate={{  opacity: 1 }}
+						exit={{ opacity: 0 }}
+						transition={{ duration: 0.2 }}
+						className={classes.nav_mobile}
+					>
+						<ul className={classes.nav_mobile__links}>
+							<li className={classes.nav_mobile__link}>
+								{' '}
+								<Link onClick={toggleNav} href='/'>
+									{' '}
+									Strona główna{' '}
+								</Link>{' '}
+							</li>
+							<li className={classes.nav_mobile__link}>
+								{' '}
+								<Link onClick={toggleNav} href='/gallery'>
+									{' '}
+									Galeria{' '}
+								</Link>{' '}
+							</li>
+							<li className={classes.nav_mobile__link}>
+								{' '}
+								<Link onClick={toggleNav} href='/contact'>
+									{' '}
+									Kontakt{' '}
+								</Link>{' '}
+							</li>
+						</ul>
+					</motion.nav>
+			)}
+			</AnimatePresence>
+		</>
+	);
+};
+export default Nav_mobile;

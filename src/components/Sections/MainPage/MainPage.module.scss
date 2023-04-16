@@ -1,0 +1,193 @@
+$green: #8BB63A;
+.headSection{
+    background: #fff;
+    box-shadow: 0 0 0 100vmax #fff;
+    clip-path: inset(0 -100vmax);
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10rem 0;
+
+    &__textBox{
+        width: 50%;
+        padding: 0 2rem;
+    }
+    &__title{
+        color: #8BB63A;
+        font-size: 3rem;
+        font-weight: 600;
+        margin: 2rem 0;
+
+    }
+    &__text{
+        color: #000;
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin: 2rem 0;
+    }
+    &__imgBox{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__img{
+        width: 100%;
+        height: auto;
+    }
+}
+.heroImageBoxx{
+    position: relative;
+    width:  100%;
+    max-width: 900px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: clamp(2rem, 8vw, 5rem);
+    color: #fff;
+    margin: 0 auto ;
+
+    &__textbox{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+
+
+    }
+    &__logo{
+        width: clamp(250px, 80vw, 400px);
+        height: auto;
+    }
+    &__text{
+        font-size: 3rem;
+        font-weight: 600;
+        margin: 1rem 0;
+        transition: color .3s ease;
+        &:hover{
+            color: $green;
+
+        }
+    }
+        
+    
+}
+.calc{
+    padding: 5rem 0;
+    width: 98%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__title{
+        color: #8BB63A;
+        font-size: 3rem;
+        font-weight: 600;
+        margin: 2rem 0;
+        text-align: center;
+    }
+    &__text{
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 2rem 0;
+        text-align: center;
+    }   
+    &__footer{text-align: center;
+        margin-top: 2rem;
+        font-size: 1.3rem;
+        color: #292929;
+    }
+}
+.services{
+    padding: 5rem 0;
+    width: 98%;
+    max-width:1200px;
+    margin: 0 auto;
+
+    &__title{
+        color: #8BB63A;
+        font-size: 3rem;
+        font-weight: 600;
+        margin: 2rem 0;
+        text-align: center;
+    }
+    &__text{
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 2rem 0;
+        text-align: center;
+    }   
+    &__box{
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+    &__item{
+        width: clamp(250px, 40vw, 300px);
+        margin: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: #fff;
+        padding: 1.4rem;
+        border-radius: 5px;
+        box-shadow: 0 0 8px 0 rgba(0,0,0,.1);
+        &_button{
+            background: #8BB63A;
+            border: 1px solid transparent;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            margin-top: 2rem;
+            cursor: pointer;
+            transition: background-color .3s ease, color .3s ease;
+            &:hover{
+                background: #fff;
+                color: #8BB63A;
+                border: 1px solid #8BB63A;
+            }
+        }
+    }
+    &__img{
+        width: 50%;
+        max-width: 74px;
+        height: auto;
+    }
+    &__itemTitle{
+        color: #8BB63A;
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 1rem 0;
+    }
+    &__itemText{
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 2rem 0;
+    }
+}
+.about{
+    padding: 5rem 0;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: 600;
+    &__title{
+        color: #8BB63A;
+        font-size: 3rem;
+        font-weight: 600;
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+}

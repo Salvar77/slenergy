@@ -1,0 +1,36 @@
+.grantBox{
+    background-color: #fff;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+ 
+}
+.grantTitle{
+    color: #8BB63A;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 2rem 0;
+    text-align: center;
+    
+}
+.grantText{
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    margin: 2rem 0;
+    text-align: center;
+}
+.grantLink{
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 2rem 0;
+    text-align: center;
+    text-decoration: underline;
+
+    &:hover{
+        color: #8BB63A;
+
+    }
+}
