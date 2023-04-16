@@ -205,7 +205,7 @@ function Calculator() {
 				</div>
 				<div className={classes.calcForm__inputForm}>
 					<label className={classes.label} htmlFor='averagePriceOfSell'>
-						Średnia cena zakupu prądu
+						Średnia cena sprzedaży prądu
 					</label>
 
 					<div className={classes.inputBox}>

@@ -2,7 +2,8 @@ import HeroImage from '@/components/HeroImage/HeroImage';
 import style from '@/styles/HeroImage.module.scss';
 import classes from './Offers.module.scss';
 import Image from 'next/image';
-import heroimg from '@/assets/images/mainpagehero.jpg';
+import heroimg from '@/assets/images/woltaika.jpg';
+import woltaika2 from '@/assets/images/woltaika2.jpg';
 import React from 'react';
 
 const Fotowoltaika = () => {
@@ -78,7 +79,7 @@ const Fotowoltaika = () => {
 				<div className={style.headSection__imgBox}>
 					<Image
 						className={style.headSection__img}
-						src={heroimg}
+						src={woltaika2}
 						alt='hero grafika '
 					/>
 				</div>
