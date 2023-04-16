@@ -5,7 +5,13 @@ import heroimg from '@/assets/images/mainpagehero.jpg';
 import classes from './MainPage.module.scss';
 import Calculator from '@/components/Calc/Calc';
 import logo from '@/assets/images/SpeedLightLogoHero.svg';
+import img2 from '@/assets/images/second_main.jpeg'
 import Link from 'next/link';
+import heatpump from '@/assets/images/heat-pump.png';
+import battery from '@/assets/images/battery.png';
+import solar from '@/assets/images/solar-panel.png';
+
+
 const MainPage = () => {
 	return (
 		<>
@@ -50,7 +56,7 @@ const MainPage = () => {
 				<div className={classes.headSection__imgBox}>
 					<Image
 						className={classes.headSection__img}
-						src={heroimg}
+						src={img2}
 						alt='heroimg'
 					/>
 				</div>
@@ -73,42 +79,39 @@ const MainPage = () => {
 				<h2 className={classes.services__title}>Nasze usługi</h2>
 				<div className={classes.services__box}>
 					<div className={classes.services__item}>
-						<Image src={sun} alt='asd' className={classes.services__img} />
-						<h3 className={classes.services__itemTitle}>Projektowanie</h3>
+						<Image src={solar} alt='ikona paneli solarnych' className={classes.services__img} />
+						<h3 className={classes.services__itemTitle}>Panele fotowoltaiczne</h3>
 						<p className={classes.services__itemText}>
-							Przygotowujemy projekt instalacji fotowoltaicznej, który zawiera
-							szczegółowe dane techniczne oraz kosztorys.
+						Zainstaluj panele fotowoltaiczne i ciesz się czystą energią słoneczną!
 						</p>
 						<Link
-							href='/uslugi/projektowanie'
+							href='/fotowoltaika'
 							className={classes.services__item_button}
 						>
 							Więcej informacji
 						</Link>
 					</div>
 					<div className={classes.services__item}>
-						<Image src={sun} alt='asd' className={classes.services__img} />
-						<h3 className={classes.services__itemTitle}>Montaż</h3>
+						<Image src={battery} alt='ikona bateri' className={classes.services__img} />
+						<h3 className={classes.services__itemTitle}>Magazyny energii</h3>
 						<p className={classes.services__itemText}>
-							Przygotowujemy projekt instalacji fotowoltaicznej, który zawiera
-							szczegółowe dane techniczne oraz kosztorys.
+						Magazynuj energię i ciesz się jej niezależnym wykorzystaniem!
 						</p>
 						<Link
-							href='/uslugi/montaz'
+							href='/magazyn_energii'
 							className={classes.services__item_button}
 						>
 							Więcej informacji
 						</Link>
 					</div>
 					<div className={classes.services__item}>
-						<Image src={sun} alt='asd' className={classes.services__img} />
-						<h3 className={classes.services__itemTitle}>Serwis</h3>
+						<Image src={heatpump} alt='ikona pompy ciepła' className={classes.services__img} />
+						<h3 className={classes.services__itemTitle}>Pompy ciepła</h3>
 						<p className={classes.services__itemText}>
-							Przygotowujemy projekt instalacji fotowoltaicznej, który zawiera
-							szczegółowe dane techniczne oraz kosztorys.
+						Wybierz pompę ciepła i ogrzewaj swój dom w sposób ekologiczny i oszczędny!
 						</p>
 						<Link
-							href='/uslugi/serwis'
+							href='/pompy_ciepla'
 							className={classes.services__item_button}
 						>
 							Więcej informacji

@@ -2,6 +2,7 @@ import HeroImage from '@/components/HeroImage/HeroImage';
 import style from '@/styles/HeroImage.module.scss';
 import Image from 'next/image';
 import heroimg from '@/assets/images/pompa.jpg';
+import pompa2 from '@/assets/images/pompa2.jpg';
 import React from 'react';
 
 const Pompyciepla = () => {
@@ -11,32 +12,21 @@ const Pompyciepla = () => {
 				<div className={style.heroImageTextBox}>
 					<h1 className={style.heroImageTextBox__title}>Pompy ciepła Opole</h1>
 					<p className={style.heroImageTextBox__text}>
-						Jesteśmy specjalistami w dziedzinie fotowoltaiki i oferujemy
-						kompleksowe usługi, w tym montaż, serwis oraz sprzedaż paneli
-						fotowoltaicznych. Nasza firma posiada doświadczenie oraz wiedzę
-						niezbędną do zapewnienia Państwu najwyższej jakości usług w zakresie
-						fotowoltaiki.
+						Pompy ciepła to urządzenia, które pozwalają na przepompowanie
+						energii cieplnej z jednego miejsca do drugiego. Najczęściej stosuje
+						się je do ogrzewania pomieszczeń lub wody użytkowej, ale mogą być
+						także wykorzystywane do chłodzenia.
 					</p>
 					<p className={style.heroImageTextBox__text}>
-						Jeśli szukają Państwo rozwiązania, które pozwoli na obniżenie
-						kosztów energii elektrycznej oraz zwiększenie niezależności
-						energetycznej, to zapraszamy do kontaktu z nami. Z chęcią pomożemy w
-						doborze odpowiedniego systemu oraz wykonamy dla Państwa darmową
-						wycenę.
+						Pompy ciepła działają na zasadzie odzyskiwania energii z otoczenia,
+						co oznacza, że pobierają ciepło z powietrza, wody czy gleby i
+						przekazują je do pomieszczenia, w którym jest zainstalowana. Dzięki
+						temu są one bardziej ekologiczne i energooszczędne w porównaniu do
+						tradycyjnych systemów grzewczych, co przekłada się na niższe
+						rachunki za energię.
 					</p>
-					<p className={style.heroImageTextBox__text}>
-						Nasza oferta jest skierowana zarówno do klientów indywidualnych, jak
-						i biznesowych. Gwarantujemy fachowe doradztwo oraz kompleksowe
-						wsparcie na każdym etapie współpracy.
-					</p>
-					<p className={style.heroImageTextBox__text}>
-						Nasza oferta jest skierowana zarówno do klientów indywidualnych, jak
-						i biznesowych. Gwarantujemy fachowe doradztwo oraz kompleksowe
-						wsparcie na każdym etapie współpracy.
-					</p>
-					<p className={style.heroImageTextBox__text}>
-						Zapraszamy do kontaktu z nami i skorzystania z naszych usług.
-					</p>
+				
+		
 				</div>
 			</HeroImage>
 			<section className={style.headSection}>
@@ -83,12 +73,11 @@ const Pompyciepla = () => {
 						użytkowania i minimalizuje koszty związane z ich serwisowaniem i
 						naprawami.
 					</p>
-			
 				</div>
 				<div className={style.headSection__imgBox}>
 					<Image
 						className={style.headSection__img}
-						src={heroimg}
+						src={pompa2}
 						alt='hero grafika '
 					/>
 				</div>

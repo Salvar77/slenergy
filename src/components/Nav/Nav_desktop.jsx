@@ -19,7 +19,7 @@ const Nav_desktop = () => {
 					</Link>
 				</li>
 				<li className={classes.drop}>
-					<span className={classes.nav_link_desktop} href='/Oferta'>
+					<span className={classes.nav_link_desktop} >
 						Oferta
 					</span>
 					<ul className={classes.hoverMenu}>
@@ -34,11 +34,11 @@ const Nav_desktop = () => {
 						</li>
 					</ul>
 				</li>
-				<li>
+				{/* <li>
 					<Link className={classes.nav_link_desktop} href='/galeria'>
 						Galeria
 					</Link>
-				</li>
+				</li> */}
 				<li className={classes.drop}>
 					<span className={classes.nav_link_desktop}>Dotacje</span>
 					<ul className={classes.hoverMenu}>
@@ -46,7 +46,7 @@ const Nav_desktop = () => {
 							<Link href='/moj_prad'> Mój Prąd</Link>
 						</li>
 						<li>
-							<Link href='/moje_cieplo'>Energia Sprawiedliwa</Link>
+							<Link href='/moje_cieplo'>Moje Ciepło</Link>
 						</li>
 				
 					</ul>

@@ -22,39 +22,52 @@ const Nav_mobile = () => {
 				<Hamburger onClick={toggleNav} isActive={isActive} />
 			</div>
 			<AnimatePresence>
-			{isActive && (
+				{isActive && (
 					<motion.nav
 						initial={{ opacity: 0 }}
-						animate={{  opacity: 1 }}
+						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.2 }}
 						className={classes.nav_mobile}
 					>
 						<ul className={classes.nav_mobile__links}>
 							<li className={classes.nav_mobile__link}>
-								{' '}
+								
 								<Link onClick={toggleNav} href='/'>
-									{' '}
-									Strona główna{' '}
-								</Link>{' '}
+								
+									Strona główna
+								</Link>
 							</li>
 							<li className={classes.nav_mobile__link}>
-								{' '}
-								<Link onClick={toggleNav} href='/gallery'>
-									{' '}
-									Galeria{' '}
-								</Link>{' '}
+								<Link onClick={toggleNav} href='/fotowoltaika'>
+									Fotowoltaika
+								</Link>
 							</li>
 							<li className={classes.nav_mobile__link}>
-								{' '}
-								<Link onClick={toggleNav} href='/contact'>
-									{' '}
-									Kontakt{' '}
-								</Link>{' '}
+								<Link onClick={toggleNav} href='/pompy_ciepla'>
+									Pompy Ciepła
+								</Link>
+							</li>
+							<li className={classes.nav_mobile__link}>
+								<Link onClick={toggleNav} href='/magazyn_energii'>
+									Magazyny Energii
+								</Link>
+							</li>
+							<li className={classes.nav_mobile__link}>
+								<Link onClick={toggleNav} href='/moj_prad'> Mój Prąd</Link>
+							</li>
+							<li className={classes.nav_mobile__link}>
+								<Link onClick={toggleNav} href='/moje_cieplo'>Moje Ciepło</Link>
+							</li>
+							<li className={classes.nav_mobile__link}>
+								<Link onClick={toggleNav} href='/kontakt'>
+								
+									Kontakt
+								</Link>
 							</li>
 						</ul>
 					</motion.nav>
-			)}
+				)}
 			</AnimatePresence>
 		</>
 	);
