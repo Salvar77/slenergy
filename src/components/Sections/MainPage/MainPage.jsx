@@ -25,11 +25,17 @@ const MainPage = () => {
 						<Link href='/fotowoltaika' className={classes.heroImageBoxx__text}>
 							Fotowoltaika
 						</Link>
-						<Link href='/' className={classes.heroImageBoxx__text}>
+						<Link href='/pompy_ciepla' className={classes.heroImageBoxx__text}>
 							Pompy ciepła
 						</Link>
-						<Link href='/' className={classes.heroImageBoxx__text}>
+						<Link href='/magazyn_energii' className={classes.heroImageBoxx__text}>
 							Magazyny energi
+						</Link>
+						<Link href='/' className={classes.heroImageBoxx__text}>
+							Klimatyzacja
+						</Link>
+						<Link href='/' className={classes.heroImageBoxx__text}>
+							Instalacje elektryczne
 						</Link>
 					</div>
 				</div>

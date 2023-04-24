@@ -14,61 +14,68 @@ const Nav_mobile = () => {
 	return (
 		<>
 			<div className={classes.nav_container}>
-				<div className={classes.nav_mobile__logo}>
+				<div className={classes.nav_logo}>
 					<Link href='/'>
 						<Image src={logo} alt='logo' width={200} />
 					</Link>
 				</div>
 				<Hamburger onClick={toggleNav} isActive={isActive} />
+				<AnimatePresence>
+					{isActive && (
+						<motion.nav
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							transition={{ duration: 0.2 }}
+							className={classes.nav_mobile}
+						>
+							<ul className={classes.nav_mobile__links}>
+								<li className={classes.nav_mobile__link}>
+									<Link onClick={toggleNav} href='/'>
+										Strona główna
+									</Link>
+								</li>
+								<li className={classes.nav_mobile__link}>
+									<Link onClick={toggleNav} href='/fotowoltaika'>
+										Fotowoltaika
+									</Link>
+								</li>
+								<li className={classes.nav_mobile__link}>
+									<Link onClick={toggleNav} href='/pompy_ciepla'>
+										Pompy Ciepła
+									</Link>
+								</li>
+								<li className={classes.nav_mobile__link}>
+									<Link onClick={toggleNav} href='/magazyn_energii'>
+										Magazyny Energii
+									</Link>
+								</li>
+								<li className={classes.nav_mobile__link}>
+									<Link onClick={toggleNav} href='/galeria'>
+										Galeria
+									</Link>
+								</li>
+								<li className={classes.nav_mobile__link}>
+									<Link onClick={toggleNav} href='/moj_prad'>
+										{' '}
+										Mój Prąd
+									</Link>
+								</li>
+								<li className={classes.nav_mobile__link}>
+									<Link onClick={toggleNav} href='/moje_cieplo'>
+										Moje Ciepło
+									</Link>
+								</li>
+								<li className={classes.nav_mobile__link}>
+									<Link onClick={toggleNav} href='/kontakt'>
+										Kontakt
+									</Link>
+								</li>
+							</ul>
+						</motion.nav>
+					)}
+				</AnimatePresence>
 			</div>
-			<AnimatePresence>
-				{isActive && (
-					<motion.nav
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
-						transition={{ duration: 0.2 }}
-						className={classes.nav_mobile}
-					>
-						<ul className={classes.nav_mobile__links}>
-							<li className={classes.nav_mobile__link}>
-								
-								<Link onClick={toggleNav} href='/'>
-								
-									Strona główna
-								</Link>
-							</li>
-							<li className={classes.nav_mobile__link}>
-								<Link onClick={toggleNav} href='/fotowoltaika'>
-									Fotowoltaika
-								</Link>
-							</li>
-							<li className={classes.nav_mobile__link}>
-								<Link onClick={toggleNav} href='/pompy_ciepla'>
-									Pompy Ciepła
-								</Link>
-							</li>
-							<li className={classes.nav_mobile__link}>
-								<Link onClick={toggleNav} href='/magazyn_energii'>
-									Magazyny Energii
-								</Link>
-							</li>
-							<li className={classes.nav_mobile__link}>
-								<Link onClick={toggleNav} href='/moj_prad'> Mój Prąd</Link>
-							</li>
-							<li className={classes.nav_mobile__link}>
-								<Link onClick={toggleNav} href='/moje_cieplo'>Moje Ciepło</Link>
-							</li>
-							<li className={classes.nav_mobile__link}>
-								<Link onClick={toggleNav} href='/kontakt'>
-								
-									Kontakt
-								</Link>
-							</li>
-						</ul>
-					</motion.nav>
-				)}
-			</AnimatePresence>
 		</>
 	);
 };

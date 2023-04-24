@@ -34,11 +34,11 @@ const Nav_desktop = () => {
 						</li>
 					</ul>
 				</li>
-				{/* <li>
+				<li>
 					<Link className={classes.nav_link_desktop} href='/galeria'>
 						Galeria
 					</Link>
-				</li> */}
+				</li>
 				<li className={classes.drop}>
 					<span className={classes.nav_link_desktop}>Dotacje</span>
 					<ul className={classes.hoverMenu}>

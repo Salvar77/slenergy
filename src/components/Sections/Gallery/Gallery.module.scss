@@ -1,0 +1,54 @@
+.galleryWrapper{
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 5rem 0;
+    min-height: calc(100vh - 200px);
+	min-height: calc(100dvh - 200px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+
+}
+.gallery{
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.title{
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 600;
+    color: #88b630;
+    margin: 3rem 0;
+    
+}
+.image{
+    width: 100%;
+    height: 100%;
+
+}
+.imgBox{
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    padding: 0 clamp(0.5rem, 1vw, 3rem);
+}
+.carousel{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+   
+    
+}
+

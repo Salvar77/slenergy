@@ -1,12 +1,27 @@
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 import HeroImage from '@/components/HeroImage/HeroImage';
 import style from '@/styles/HeroImage.module.scss';
-import classes from './Offers.module.scss';
 import Image from 'next/image';
 import heroimg from '@/assets/images/woltaika.jpg';
 import woltaika2 from '@/assets/images/woltaika2.jpg';
 import React from 'react';
 
 const Fotowoltaika = () => {
+	const images = [
+		{
+			src:  woltaika2 ,
+			alt: 'Obrazek 1',
+		},
+		{
+			src:  woltaika2 ,
+			alt: 'Obrazek 2',
+		},
+		{
+			src:  woltaika2 ,
+			alt: 'Obrazek 3',
+		},
+	];
 	return (
 		<>
 			<HeroImage image={heroimg} alt='sa'>
@@ -51,23 +66,24 @@ const Fotowoltaika = () => {
 						swoje rachunki za energię elektryczną.
 					</p>
 					<p className={style.headSection__text}>
-						<b>Ochrona środowiska: </b> 
-						Wytwarzanie energii ze źródeł odnawialnych,
-						takich jak energia słoneczna, pomaga zmniejszyć emisję szkodliwych
-						gazów cieplarnianych i innych zanieczyszczeń powietrza, co wpływa
-						pozytywnie na środowisko i zdrowie publiczne.
+						<b>Ochrona środowiska: </b>
+						Wytwarzanie energii ze źródeł odnawialnych, takich jak energia
+						słoneczna, pomaga zmniejszyć emisję szkodliwych gazów cieplarnianych
+						i innych zanieczyszczeń powietrza, co wpływa pozytywnie na
+						środowisko i zdrowie publiczne.
 					</p>
 					<p className={style.headSection__text}>
-						<b>Uniezależnienie od dostawców energii: </b>Dzięki zainstalowaniu paneli
-						fotowoltaicznych, domy i firmy mogą produkować swoją własną energię
-						elektryczną, co pozwala na uniezależnienie od dostawców energii i
-						zmniejszenie ryzyka wzrostu cen energii.
+						<b>Uniezależnienie od dostawców energii: </b>Dzięki zainstalowaniu
+						paneli fotowoltaicznych, domy i firmy mogą produkować swoją własną
+						energię elektryczną, co pozwala na uniezależnienie od dostawców
+						energii i zmniejszenie ryzyka wzrostu cen energii.
 					</p>
 					<p className={style.headSection__text}>
-						<b>Długoterminowe oszczędności: </b>Inwestycja w panele fotowoltaiczne może
-						być początkowo kosztowna, ale w dłuższej perspektywie pozwala na
-						znaczne oszczędności na rachunkach za energię elektryczną, co
-						przyczynia się do poprawy finansowej sytuacji domów i firm.
+						<b>Długoterminowe oszczędności: </b>Inwestycja w panele
+						fotowoltaiczne może być początkowo kosztowna, ale w dłuższej
+						perspektywie pozwala na znaczne oszczędności na rachunkach za
+						energię elektryczną, co przyczynia się do poprawy finansowej
+						sytuacji domów i firm.
 					</p>
 					<p className={style.headSection__text}>
 						<b>Wartość dodana dla nieruchomości: </b>Zainstalowanie paneli
@@ -77,11 +93,23 @@ const Fotowoltaika = () => {
 					</p>
 				</div>
 				<div className={style.headSection__imgBox}>
-					<Image
-						className={style.headSection__img}
-						src={woltaika2}
-						alt='hero grafika '
-					/>
+					<Carousel
+						autoPlay
+						dynamicHeight
+						interval={3500}
+						emulateTouch
+						infiniteLoop
+						stopOnHover
+						showStatus={false}
+						showThumbs={false}
+						showIndicators={false}
+					>
+						{images.map((image) => (
+							<div key={image.src}>
+								<Image src={image.src} alt={image.alt} className={style.image}/>
+							</div>
+						))}
+					</Carousel>
 				</div>
 			</section>
 		</>
