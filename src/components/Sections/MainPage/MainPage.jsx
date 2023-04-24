@@ -1,6 +1,5 @@
 import HeroImage from '@/components/HeroImage/HeroImage';
 import Image from 'next/image';
-import sun from '@/assets/images/sun.png';
 import heroimg from '@/assets/images/mainpagehero.jpg';
 import classes from './MainPage.module.scss';
 import Calculator from '@/components/Calc/Calc';

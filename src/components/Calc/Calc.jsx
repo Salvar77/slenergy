@@ -6,6 +6,7 @@ import solarPanel from './solar-panel.png';
 import energy from './energy.png';
 import Image from 'next/image';
 import classes from './Calc.module.scss';
+
 function Calculator() {
 	const [checked, setChecked] = useState('south');
 	const monthlyPriceRef = useRef();
@@ -21,6 +22,7 @@ function Calculator() {
 	const handleCheckboxChange = (event) => {
 		setChecked(event.target.value);
 	};
+	const [price, setPrice] = useState(0);
 
 	useEffect(() => {
 		calculate();
@@ -61,15 +63,14 @@ function Calculator() {
 
 		const power = yearlyConsumption * multiplierDirection;
 		const panelPower = Math.round(power / 100) * 100;
-
+		const pricePanel = Math.round(panelPower * 2.5 + 5000);
+		setPrice(pricePanel);
 		setPanelPower(panelPower);
 
 		setAnnuallySaving(yearlySavings);
 		setAnnuallyPrice(annuallyPrice);
 		setAnnuallyConsumption(yearlyConsumption);
 	};
-	// const monthlyPriceRef = useRef(null);
-	const [monthlyPrice, setMonthlyPrice] = useState(200);
 
 	const handleButtonClick = (ref, value) => {
 		if (parseInt(ref.current.value) + value < 0) {
@@ -117,7 +118,7 @@ function Calculator() {
 							type='number'
 							id='monthlyPrice'
 							name='monthlyPrice'
-							defaultValue={monthlyPrice}
+							defaultValue={250}
 							step={10}
 							ref={monthlyPriceRef}
 							onChange={calculate}
@@ -331,6 +332,19 @@ function Calculator() {
 					</span>
 					<span className={classes.infoCalc__text}> {annuallySaving} zł</span>
 				</div>
+			</div>
+			<div className={classes.priceInfo}>
+				<div className={classes.priceInfo__box}>
+					<span className={classes.priceInfo__text}>
+						Szacunkowa cena instalacji:
+					</span>
+					<span className={classes.priceInfo__price}>{price} zł</span>
+				</div>
+				<p className={classes.priceInfo__desc}>
+					{' '}
+					*Finalna cena może się różnić w zależności od pokrycia dachowego oraz
+					systemu montażu{' '}
+				</p>
 			</div>
 		</div>
 	);
