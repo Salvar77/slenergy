@@ -62,8 +62,11 @@ function Calculator() {
 		).toFixed();
 
 		const power = yearlyConsumption * multiplierDirection;
+
 		const panelPower = Math.round(power / 100) * 100;
-		const pricePanel = Math.round(panelPower * 2.5 + 5000);
+
+		const pricePanel = Math.round(panelPower * 3.1);
+
 		setPrice(pricePanel);
 		setPanelPower(panelPower);
 
