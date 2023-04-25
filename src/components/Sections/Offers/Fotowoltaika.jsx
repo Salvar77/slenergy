@@ -96,11 +96,6 @@ const Fotowoltaika = () => {
 						wsparcie na każdym etapie współpracy.
 					</p>
 					<p className={style.heroImageTextBox__text}>
-						Nasza oferta jest skierowana zarówno do klientów indywidualnych, jak
-						i biznesowych. Gwarantujemy fachowe doradztwo oraz kompleksowe
-						wsparcie na każdym etapie współpracy.
-					</p>
-					<p className={style.heroImageTextBox__text}>
 						Zapraszamy do kontaktu z nami i skorzystania z naszych usług.
 					</p>
 				</div>

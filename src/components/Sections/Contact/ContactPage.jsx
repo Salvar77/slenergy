@@ -1,4 +1,4 @@
-'use client';
+
 import FadeSection from '@/components/FadeSection/FadeSection';
 import classes from './contact.module.scss';
 import { useRef, useState } from 'react';
@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
 import Image from 'next/image';
 import phone from '@/assets/images/phone-call-B.svg';
 import email from '@/assets/images/mail-B.svg';
-
+import rafal from './rafal.jpg';
 import hero from '@/assets/images/mainpagehero.jpg';
 
 const Contact = () => {
@@ -24,26 +24,26 @@ const Contact = () => {
 		setEnteredEmail('');
 	};
 
-	// const sendEmail = (e) => {
-	// 	e.preventDefault();
-    //     setPending(true);
-	// 	emailjs
-	// 		.sendForm(
-	// 			'service_33pbj1t',
-	// 			'template_56iabxq',
-	// 			form.current,
-	// 			'79vkiZsFKHfTppzCh'
-	// 		)
-	// 		.then(
-	// 			(result) => {
-	// 				resetForm();
-	// 				// openEmailModal();
-	// 			},
-	// 			(error) => {
-	// 				// openEmailModalerror();
-	// 			}
-	// 		);
-	// };
+	const sendEmail = (e) => {
+		e.preventDefault();
+        setPending(true);
+		emailjs
+			.sendForm(
+				'service_yehx0pp',
+				'template_ru2izri',
+				form.current,
+				'wwdbnPuL4-WZzJIcR'
+			)
+			.then(
+				(result) => {
+					resetForm();
+					
+				},
+				(error) => {
+					
+				}
+			);
+	};
 
 	return (
 
@@ -61,10 +61,16 @@ const Contact = () => {
 						<Image className={classes.contact__item__img} src={email} alt='ikonka email' width={30} />{' '}
 						kontakt@slenergy.pl{' '}
 					</span>
+					<span className={classes.contact__item}>
+					<b>NIP: </b> 75 43 054 995
+					</span>
+					<span className={classes.contact__item}>
+					<b>REGON: </b>389 501 522
+					</span>
 				</div>
 
 				<form className={classes.contact__form} ref={form}
-                //  onSubmit={sendEmail}
+                 onSubmit={sendEmail}
                  >
 					<label className={classes.contact__form__label} htmlFor='user_name'>
 						Imię{' '}
@@ -105,6 +111,27 @@ const Contact = () => {
 						{pending ? 'Wysyłanie...' : 'Wyślij'}
 					</button>
 				</form>
+			</div>
+			<div className={classes.about}>
+				<div className={classes.about__imgBox}>
+					<Image src={rafal} alt='rafal' className={classes.about__imgBox__img} />
+
+					</div>
+				<div className={classes.about__text}>
+					<h2 className={classes.about__text__title}>Rafał Małecki</h2>
+					<p className={classes.about__text__paragraph}>
+					Jestem doświadczonym specjalistą w dziedzinie instalacji elektrycznych i fotowoltaicznych oraz magazynów energii z 6-letnim doświadczeniem. Pasjonuję się tworzeniem rozwiązań zrównoważonej energii, które przyczyniają się do ochrony środowiska naturalnego. Moja praca w tej branży nadal trwa, a każde zadanie traktuję z pełnym zaangażowaniem i profesjonalizmem.
+					</p>
+					<p className={classes.about__text__paragraph}>
+					Jestem otwarty na ludzi, co pozwala mi tworzyć pozytywne relacje z klientami i współpracownikami. Cenię sobie możliwość współpracy z różnymi ludźmi i pomagania im w realizacji ich potrzeb związanych z instalacjami elektrycznymi, fotowoltaiką i magazynami energii. Jestem uważnym słuchaczem i zawsze staram się zrozumieć potrzeby moich klientów, aby dostarczyć im najlepszych rozwiązań.
+					</p>
+					<p className={classes.about__text__paragraph}>
+					Moja wiedza i doświadczenie w zakresie instalacji elektrycznych, fotowoltaiki i magazynów energii pozwalają mi na profesjonalne podejście do każdego projektu. Nieustannie poszerzam swoje kompetencje, aby być na bieżąco z najnowszymi technologiami i trendami w tej dynamicznie rozwijającej się dziedzinie.
+
+					</p>
+					</div>
+
+
 			</div>
 		</FadeSection>
 	);

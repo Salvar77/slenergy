@@ -1,5 +1,3 @@
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import classes from './Gallery.module.scss';
 import Image from 'next/image';
@@ -15,8 +13,29 @@ import foto10 from '@/assets/images/gallery/foto-10.jpg';
 import foto11 from '@/assets/images/gallery/foto-11.jpg';
 import foto12 from '@/assets/images/gallery/foto-12.jpg';
 import foto13 from '@/assets/images/gallery/foto-13.jpg';
+import leftArrow from './arrow-left-circle.svg';
+import rightArrow from './arrow-right-circle.svg';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-
+const SamplePrevArrow = props => {
+	const { onClick } = props;
+	return (
+	  <button type="button" className={classes.nextP} onClick={onClick}>
+			<Image src = {leftArrow} alt = "left arrow" width = {40} height = {40} />
+	  </button>
+	);
+  };
+  
+  const SampleNextArrow = props => {
+	const { onClick } = props;
+	return (
+	  <button type="button" className={classes.nextA} onClick={onClick}>
+			<Image src = {rightArrow} alt = "right arrow" width = {40} height = {40} />
+	  </button>
+	);
+  };
+  
 const Gallery = () => {
 	const images = [
 		{
@@ -72,21 +91,14 @@ const Gallery = () => {
 		infinite: true,
 		slidesToShow: 3,
 		speed: 500,
-		
 		adaptiveHeight: true,
 		autoplay: true,
 		autoplaySpeed: 3000,
-		variableWidth: true,
 		centerMode: true,
-		
-		
+		prevArrow: <SamplePrevArrow />,
+		nextArrow: <SampleNextArrow />,
 		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 2,
-				},
-			},
+
 			{
 				breakpoint: 768,
 				settings: {
@@ -106,6 +118,7 @@ const Gallery = () => {
 								src={image.src}
 								alt={image.alt}
 								className={classes.image}
+								priority
 							/>
 						</div>
 					))}

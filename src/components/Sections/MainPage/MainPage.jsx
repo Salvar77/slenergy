@@ -51,11 +51,8 @@ const MainPage = () => {
 						systemu.
 					</p>
 					<p className={classes.headSection__text}>
-						Nasza firma zatrudnia wykwalifikowanych specjalistów, którzy
-						posiadają niezbędne kwalifikacje i doświadczenie w dziedzinie
-						montażu systemów fotowoltaicznych. Montujemy zarówno systemy dla
-						klientów indywidualnych, jak i przedsiębiorstw, na terenie całego
-						kraju.
+						 Montujemy zarówno systemy dla klientów indywidualnych, jak i przedsiębiorstw, na terenie województw: opolskiego, śląskiego, dolnośląskiego.
+						
 					</p>
 				</div>
 				<div className={classes.headSection__imgBox}>

@@ -23,9 +23,9 @@ const Footer = () => {
 							kontakt@slenergy.pl
 						</p>
 					</div>
-					<p className={classes.footer__content__right__text}>NIP 1234567890</p>
+					<p className={classes.footer__content__right__text}>NIP 75 43 054 995</p>
 					<p className={classes.footer__content__right__text}>
-						REGON 123456789
+						REGON 389 501 522
 					</p>
 				</div>
 			</div>
