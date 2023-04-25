@@ -4,22 +4,71 @@ import HeroImage from '@/components/HeroImage/HeroImage';
 import style from '@/styles/HeroImage.module.scss';
 import Image from 'next/image';
 import heroimg from '@/assets/images/woltaika.jpg';
-import woltaika2 from '@/assets/images/woltaika2.jpg';
-import React from 'react';
+import foto from '@/assets/images/gallery/foto.jpg';
+import foto1 from '@/assets/images/gallery/foto-1.jpg';
+import foto2 from '@/assets/images/gallery/foto-2.jpg';
+import foto4 from '@/assets/images/gallery/foto-4.jpg';
+import foto5 from '@/assets/images/gallery/foto-5.jpg';
+import foto6 from '@/assets/images/gallery/foto-6.jpg';
+import foto8 from '@/assets/images/gallery/foto-8.jpg';
+import foto9 from '@/assets/images/gallery/foto-9.jpg';
+import foto10 from '@/assets/images/gallery/foto-10.jpg';
+import foto11 from '@/assets/images/gallery/foto-11.jpg';
+import foto12 from '@/assets/images/gallery/foto-12.jpg';
+import foto13 from '@/assets/images/gallery/foto-13.jpg';
+
+
+
 
 const Fotowoltaika = () => {
 	const images = [
 		{
-			src:  woltaika2 ,
-			alt: 'Obrazek 1',
+			src:  foto ,
+			alt: 'Przykładowa realizacja montażu paneli fotowoltaicznych',
 		},
 		{
-			src:  woltaika2 ,
-			alt: 'Obrazek 2',
+			src:  foto1 ,
+			alt: 'Przykładowa realizacja montażu paneli fotowoltaicznych',
 		},
 		{
-			src:  woltaika2 ,
-			alt: 'Obrazek 3',
+			src:  foto2 ,
+			alt: 'Przykładowa realizacja montażu paneli fotowoltaicznych',
+		},
+		{
+			src:  foto4 ,
+			alt: 'Przykładowa realizacja montażu paneli fotowoltaicznych',
+		},
+		{
+			src:  foto5 ,
+			alt: 'Przykładowa realizacja montażu paneli fotowoltaicznych',
+		},
+		{
+			src:  foto6 ,
+			alt: 'Przykładowa realizacja montażu paneli fotowoltaicznych',
+		},
+		{
+			src:  foto8 ,
+			alt: 'Przykładowa realizacja montażu paneli fotowoltaicznych',
+		},
+		{
+			src:  foto9 ,
+			alt: 'Przykładowa realizacja montażu paneli fotowoltaicznych',
+		},
+		{
+			src:  foto10 ,
+			alt: 'Przykładowy montaż falownika ',
+		},
+		{
+			src:  foto11 ,
+			alt: 'Przykładowy montaż falownika ',
+		},
+		{
+			src:  foto12 ,
+			alt: 'Przykładowy montaż falownika ',
+		},
+		{
+			src:  foto13 ,
+			alt: 'Przykładowy montaż pompy ciepłą',
 		},
 	];
 	return (
@@ -103,6 +152,7 @@ const Fotowoltaika = () => {
 						showStatus={false}
 						showThumbs={false}
 						showIndicators={false}
+					
 					>
 						{images.map((image) => (
 							<div key={image.src}>
