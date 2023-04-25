@@ -49,6 +49,31 @@ const Contact = () => {
 
 		<FadeSection className={classes.contact}>
             <Image src={hero} alt='hero grafika' className={classes.contact__hero}></Image>
+			<div className={classes.about}>
+				<div className={classes.about__imgBox}>
+					<Image src={rafal} alt='rafal' className={classes.about__imgBox__img} />
+
+					</div>
+				<div className={classes.about__text}>
+					<h2 className={classes.about__text__title}>Rafał Małecki</h2>
+					<p className={classes.about__text__paragraph}>
+					Jestem doświadczonym specjalistą w dziedzinie instalacji elektrycznych i fotowoltaicznych oraz magazynów energii z 6-letnim doświadczeniem. Pasjonuję się tworzeniem rozwiązań zrównoważonej energii, które przyczyniają się do ochrony środowiska naturalnego. Moja praca w tej branży nadal trwa, a każde zadanie traktuję z pełnym zaangażowaniem i profesjonalizmem.
+					</p>
+					<p className={classes.about__text__paragraph}>
+					Jestem otwarty na ludzi, co pozwala mi tworzyć pozytywne relacje z klientami i współpracownikami. Cenię sobie możliwość współpracy z różnymi ludźmi i pomagania im w realizacji ich potrzeb związanych z instalacjami elektrycznymi, fotowoltaiką i magazynami energii. Jestem uważnym słuchaczem i zawsze staram się zrozumieć potrzeby moich klientów, aby dostarczyć im najlepszych rozwiązań.
+					</p>
+					<p className={classes.about__text__paragraph}>
+					Moja wiedza i doświadczenie w zakresie instalacji elektrycznych, fotowoltaiki i magazynów energii pozwalają mi na profesjonalne podejście do każdego projektu. Nieustannie poszerzam swoje kompetencje, aby być na bieżąco z najnowszymi technologiami i trendami w tej dynamicznie rozwijającej się dziedzinie.
+
+					</p>
+					<p className={classes.about__text__paragraph}>
+					Poza moją pracą zawodową, cenię sobie czas spędzony z rodziną i przyjaciółmi. Moja miłość do ludzi sprawia, że jestem osobą przyjazną i empatyczną, gotową wspierać innych w osiąganiu ich celów. Wierzę, że uczciwość, zaangażowanie i profesjonalizm są kluczowymi wartościami w mojej pracy i życiu osobistym.
+
+					</p>
+					</div>
+
+
+			</div>
 			<div className={classes.container}>
 				<div className={classes.contact__info}>
 					<span className={classes.contact__person}> Skontaktuj się </span>
@@ -112,27 +137,7 @@ const Contact = () => {
 					</button>
 				</form>
 			</div>
-			<div className={classes.about}>
-				<div className={classes.about__imgBox}>
-					<Image src={rafal} alt='rafal' className={classes.about__imgBox__img} />
-
-					</div>
-				<div className={classes.about__text}>
-					<h2 className={classes.about__text__title}>Rafał Małecki</h2>
-					<p className={classes.about__text__paragraph}>
-					Jestem doświadczonym specjalistą w dziedzinie instalacji elektrycznych i fotowoltaicznych oraz magazynów energii z 6-letnim doświadczeniem. Pasjonuję się tworzeniem rozwiązań zrównoważonej energii, które przyczyniają się do ochrony środowiska naturalnego. Moja praca w tej branży nadal trwa, a każde zadanie traktuję z pełnym zaangażowaniem i profesjonalizmem.
-					</p>
-					<p className={classes.about__text__paragraph}>
-					Jestem otwarty na ludzi, co pozwala mi tworzyć pozytywne relacje z klientami i współpracownikami. Cenię sobie możliwość współpracy z różnymi ludźmi i pomagania im w realizacji ich potrzeb związanych z instalacjami elektrycznymi, fotowoltaiką i magazynami energii. Jestem uważnym słuchaczem i zawsze staram się zrozumieć potrzeby moich klientów, aby dostarczyć im najlepszych rozwiązań.
-					</p>
-					<p className={classes.about__text__paragraph}>
-					Moja wiedza i doświadczenie w zakresie instalacji elektrycznych, fotowoltaiki i magazynów energii pozwalają mi na profesjonalne podejście do każdego projektu. Nieustannie poszerzam swoje kompetencje, aby być na bieżąco z najnowszymi technologiami i trendami w tej dynamicznie rozwijającej się dziedzinie.
-
-					</p>
-					</div>
-
-
-			</div>
+		
 		</FadeSection>
 	);
 };

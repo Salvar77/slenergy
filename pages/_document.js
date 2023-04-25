@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
 	return (
-		<Html lang='en'>
+		<Html lang='pl'>
 			<Head>
 				
 				<link rel='icon' href='/favicon.ico' />
@@ -13,6 +13,7 @@ export default function Document() {
 					href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap'
 					rel='stylesheet'
 				></link>
+				<link rel="shortcut icon" href="/favicon.svg" type="image/x-icon"></link>
 			</Head>
 			<body>
 				<Main />
