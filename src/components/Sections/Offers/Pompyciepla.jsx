@@ -25,6 +25,14 @@ const Pompyciepla = () => {
 						tradycyjnych systemów grzewczych, co przekłada się na niższe
 						rachunki za energię.
 					</p>
+					<p className={style.heroImageTextBox__text}>
+						Koszt instalacji pompy ciepła zależy od wielu czynników, takich jak
+						powierzchnia pomieszczeń, rodzaj instalacji, rodzaj pompy ciepła,
+						odległość od źródła ciepła, czy też rodzaj instalacji. Ceny wraz z montażem 
+						zaczynają się od 30 000 zł. Dokładna wycena instalacji jest możliwa po
+						wykonaniu bezpłatnej wizyty technicznej.
+
+					</p>
 				
 		
 				</div>

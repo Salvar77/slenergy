@@ -67,7 +67,9 @@ input[type='number']::-webkit-outer-spin-button {
 	
 }
 .slick-arrow{
-	// padding: 2rem!important;
 	transform: translateX(-20%)!important;
+	@media(max-width: 768px){
+		display: none!important;
+	}
 
 }

@@ -12,12 +12,7 @@ const Nav_desktop = () => {
 				</Link>
 			</div>
 			<ul className={classes.nav_links_desktop}>
-				<li>
-					<Link className={classes.nav_link_desktop} href='/'>
-					
-						Strona główna
-					</Link>
-				</li>
+	
 				<li className={classes.drop}>
 					<span className={classes.nav_link_desktop} >
 						Oferta
