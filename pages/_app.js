@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
 	return (
 		<>
 			<Head>
-				<title>Speed Light Energy</title>
+				<title>Fotowoltaika Opole - Speed Light Energy</title>
 				<meta
 					name='viewport'
 					content='width=device-width,height=device-height , initial-scale=1'
