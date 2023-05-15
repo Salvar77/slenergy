@@ -8,7 +8,7 @@ import React from 'react';
 const Pompyciepla = () => {
 	return (
 		<>
-			<HeroImage image={heroimg} alt='sa'>
+			<HeroImage image={heroimg} alt='grafika przedstawiająca pompę ciepła'>
 				<div className={style.heroImageTextBox}>
 					<h1 className={style.heroImageTextBox__title}>Pompy ciepła Opole</h1>
 					<p className={style.heroImageTextBox__text}>
@@ -86,7 +86,7 @@ const Pompyciepla = () => {
 					<Image
 						className={style.headSection__img}
 						src={pompa2}
-						alt='hero grafika '
+						alt='pompa ciepła'
 					/>
 				</div>
 			</section>

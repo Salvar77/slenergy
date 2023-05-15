@@ -73,7 +73,7 @@ const Fotowoltaika = () => {
 	];
 	return (
 		<>
-			<HeroImage image={heroimg} alt='sa'>
+			<HeroImage image={heroimg} alt='przykładowy montaż fotowoltaiki na domku'>
 				<div className={style.heroImageTextBox}>
 					<h1 className={style.heroImageTextBox__title}>Fotowoltaika Opole</h1>
 					<p className={style.heroImageTextBox__text}>

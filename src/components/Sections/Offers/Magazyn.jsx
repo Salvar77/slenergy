@@ -9,7 +9,7 @@ import React from 'react';
 const Magazyn = () => {
 	return (
 		<>
-			<HeroImage image={heroimg} alt='sa'>
+			<HeroImage image={heroimg} alt='grafika przedstawiająca magazyn energi '>
 				<div className={style.heroImageTextBox}>
 					<h1 className={style.heroImageTextBox__title}>Magazyny energii Opole</h1>
 					<p className={style.heroImageTextBox__text}>
@@ -73,7 +73,7 @@ const Magazyn = () => {
 					<Image
 						className={style.headSection__img}
 						src={magazyn2}
-						alt='hero grafika '
+						alt='magazyn energi '
 					/>
 				</div>
 			</section>

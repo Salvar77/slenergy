@@ -14,7 +14,7 @@ import solar from '@/assets/images/solar-panel.png';
 const MainPage = () => {
 	return (
 		<>
-			<HeroImage image={heroimg} alt='ads'>
+			<HeroImage image={heroimg} alt='Panele fotowoltaiczne, opole'>
 				<div className={classes.heroImageBoxx}>
 					<Image
 						src={logo}
@@ -59,7 +59,8 @@ const MainPage = () => {
 					<Image
 						className={classes.headSection__img}
 						src={img2}
-						alt='heroimg'
+						alt='fotowaltaika, panele słoneczne, opole'
+						title='fotowaltaika, panele słoneczne, opole'
 					/>
 				</div>
 			</section>

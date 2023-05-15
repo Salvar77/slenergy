@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
 
 				<meta
 					name='description'
-					content='Speed Light Energy to ekspert w dziedzinie energii odnawialnej. Oferujemy najwyższej jakości panele fotowoltaiczne oraz innowacyjne pompy ciepła, które umożliwiają oszczędne i ekologiczne ogrzewanie domów i budynków. Zaufaj naszej wiedzy i doświadczeniu, aby pomóc Ci w osiągnięciu niezależności energetycznej i zminimalizowaniu emisji CO2.'
+					content='Speed Light Energy to ekspert w dziedzinie energii odnawialnej. Oferujemy najwyższej jakości panele fotowoltaiczne oraz innowacyjne pompy ciepła, które umożliwiają oszczędne i ekologiczne ogrzewanie domów i budynków.'
 				/>
 				<meta
 					name='keywords'
