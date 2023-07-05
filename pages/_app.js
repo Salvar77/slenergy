@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }) {
 					content='Fotowoltaika, Pompy ciepła, Ogrzewanie, Opole, Opolskie, Klimatyzacja '
 				/>
 				<meta name='author' content='nestcore.pl' />
-				<link rel='canonical' href='https://slenergy.pl/' />
+				<link rel='canonical' href='https://www.slenergy.pl/' />
 			</Head>
 			<Nav />
 			<main>
