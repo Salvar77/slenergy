@@ -1,36 +1,106 @@
-.grantBox{
-    background-color: #fff;
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 5rem 2rem;
- 
+.grantBox {
+  background-color: #fff;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
 }
-.grantTitle{
-    color: #8BB63A;
-    font-size: 3rem;
+.grantTitle {
+  color: #8bb63a;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 2rem 0;
+  text-align: center;
+}
+.grantText {
+  color: #000;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  margin: 2rem 0;
+  text-align: center;
+
+  &Link {
     font-weight: 600;
-    margin: 2rem 0;
-    text-align: center;
-    
-}
-.grantText{
-    color: #000;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    font-weight: 400;
-    margin: 2rem 0;
-    text-align: center;
-}
-.grantLink{
-    font-size: 1.6rem;
-    font-weight: 400;
-    margin: 2rem 0;
-    text-align: center;
-    text-decoration: underline;
+    color: #8bb63a;
+    text-decoration: none;
+    text-decoration: none;
 
-    &:hover{
-        color: #8BB63A;
-
+    &:hover {
+      border-bottom-style: solid;
     }
+  }
+}
+// .grantLink {
+//   font-size: 1.6rem;
+//   font-weight: 400;
+//   margin: 2rem 0;
+//   text-align: center;
+//   text-decoration: underline;
+
+//   &:hover {
+//     color: #8bb63a;
+//   }
+// }
+
+.grantFaq {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(139, 182, 58, 0.3);
+}
+.grantFaqItem {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(139, 182, 58, 0.3);
+  padding-bottom: 1rem;
+}
+.grantFaqQuestion {
+  font-weight: 600;
+  color: #8bb63a;
+  cursor: pointer;
+  font-size: 1.6rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+.grantFaqAnswer {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #000;
+  line-height: 1.5;
+  text-align: left;
+  padding-top: 0.8rem;
+  a {
+    font-weight: 600;
+    color: #8bb63a;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.grantFooter {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(139, 182, 58, 0.3);
+  text-align: center;
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.6;
+}
+.grantFooterText {
+  margin: 0;
+  b {
+    color: #8bb63a;
+  }
+  a {
+    color: #8bb63a;
+    text-decoration: none;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
