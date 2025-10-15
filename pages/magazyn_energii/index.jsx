@@ -2,7 +2,7 @@ import Magazyn from "@/components/Sections/Offers/Magazyn";
 import { NextSeo } from "next-seo";
 import ProductSeoMagazyn from "@/seo/ProductSeoMagazyn";
 
-export default function MagazynyEnergiiPage() {
+export default function MagazynyEnergiiPage({ isDesktop }) {
   return (
     <>
       <NextSeo
@@ -26,7 +26,19 @@ export default function MagazynyEnergiiPage() {
         }}
       />
       <ProductSeoMagazyn />
-      <Magazyn />
+      <Magazyn isDesktop={isDesktop} />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const isMobile = context.req.headers["user-agent"]
+    .toLowerCase()
+    .includes("mobi");
+
+  return {
+    props: {
+      isDesktop: !isMobile,
+    },
+  };
 }

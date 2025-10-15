@@ -10,7 +10,7 @@ const LocalBusinessSeo = () => (
         "@type": "LocalBusiness",
         name: "Speed Light Energy - fotowoltaika Opole",
         description:
-          "Profesjonalny montaż fotowoltaiki, pomp ciepła i magazynów energii w Opolu i okolicach. Montaż w 7 dni, darmowa wycena.",
+          "Profesjonalny montaż fotowoltaiki, pomp ciepła, magazynów energii, instalacji elektrycznych i klimatyzacji w Opolu i okolicach. Montaż w 7 dni, darmowa wycena.",
         image: "https://www.slenergy.pl/SpeedLightLogo.png",
         url: "https://www.slenergy.pl/",
         telephone: "+48 606 337 100",

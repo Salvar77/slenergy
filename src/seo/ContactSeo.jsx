@@ -10,7 +10,7 @@ const ContactSeo = () => (
         "@type": "ContactPage",
         name: "Kontakt - Speed Light Energy",
         description:
-          "Skontaktuj się w sprawie fotowoltaiki, pomp ciepła i magazynów energii",
+          "Skontaktuj się w sprawie fotowoltaiki, pomp ciepła, magazynów energii, instalacji elektrycznych i klimatyzacji",
         url: "https://www.slenergy.pl/kontakt",
         mainEntity: {
           "@type": "Organization",

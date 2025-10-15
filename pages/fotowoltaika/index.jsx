@@ -2,7 +2,7 @@ import Fotowoltaika from "@/components/Sections/Offers/Fotowoltaika";
 import { NextSeo } from "next-seo";
 import ProductSeo from "@/seo/ProductSeo";
 
-export default function FotowoltaikaPage() {
+export default function FotowoltaikaPage({ isDesktop }) {
   return (
     <>
       <NextSeo
@@ -26,7 +26,19 @@ export default function FotowoltaikaPage() {
         }}
       />
       <ProductSeo />
-      <Fotowoltaika />
+      <Fotowoltaika isDesktop={isDesktop} />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const isMobile = context.req.headers["user-agent"]
+    .toLowerCase()
+    .includes("mobi");
+
+  return {
+    props: {
+      isDesktop: !isMobile,
+    },
+  };
 }

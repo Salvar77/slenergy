@@ -1,18 +1,19 @@
-const { default: Gallery } = require("@/components/Sections/Gallery/Gallery");
+import Gallery from "@/components/Sections/Gallery/Gallery";
 import { NextSeo } from "next-seo";
+import GallerySeo from "@/seo/GallerySeo";
 
 export default function GaleriaPage() {
   return (
     <>
       <NextSeo
         title="Galeria – Speed Light Energy | Realizacje Fotowoltaika Opole"
-        description="Zobacz nasze realizacje fotowoltaiczne w Opolu i okolicach. Montaż w 7 dni, najwyższa jakość komponentów. Darmowa wycena +48 606 337 100."
+        description="Zobacz nasze realizacje fotowoltaiczne, pompy ciepła, magazyny energii, instalacje elektryczne i klimatyzację w Opolu i okolicach."
         canonical="https://www.slenergy.pl/galeria"
         openGraph={{
           url: "https://www.slenergy.pl/galeria",
           title: "Galeria Realizacji – Speed Light Energy",
           description:
-            "Galeria naszych realizacji fotowoltaicznych - Opole, Kędzierzyn-Koźle, Nysa i okolice. Profesjonalny montaż w 7 dni.",
+            "Galeria naszych realizacji fotowoltaicznych, pomp ciepła, magazynów energii, instalacji elektrycznych i klimatyzacji - Opole, Kędzierzyn-Koźle, Nysa i okolice. Profesjonalny montaż w 7 dni.",
           images: [
             {
               url: "https://www.slenergy.pl/SpeedLightLogo.png",
@@ -25,6 +26,7 @@ export default function GaleriaPage() {
           type: "website",
         }}
       />
+      <GallerySeo />
       <Gallery />
     </>
   );

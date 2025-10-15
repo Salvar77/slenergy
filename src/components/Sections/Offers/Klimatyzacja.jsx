@@ -7,8 +7,105 @@ import heroimgDesktop from "@/assets/images/klimatyzacja-na-scianie-2.jpg";
 import klima1 from "@/assets/images/klimatyzator-montowany-na-bialej-scianie.jpg";
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer, blurUp } from "@/utils/motion";
 
-const Klimatyzacja = () => {
+const Klimatyzacja = ({ isDesktop }) => {
+  const MotionDiv = isDesktop ? motion.div : "div";
+  const MotionP = isDesktop ? motion.p : "p";
+  const MotionSection = isDesktop ? motion.section : "section";
+  const MotionLink = isDesktop ? motion(Link) : Link;
+  const MotionImage = isDesktop ? motion(Image) : Image;
+
+  const heroTextProps = isDesktop
+    ? {
+        initial: { opacity: 0, y: 30 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.6 },
+      }
+    : {};
+
+  const sectionProps = isDesktop
+    ? {
+        initial: "hidden",
+        whileInView: "show",
+        viewport: { once: true, amount: 0.2 },
+      }
+    : {};
+
+  const staggerProps = isDesktop
+    ? {
+        variants: staggerContainer(0.1, 0.2),
+      }
+    : {};
+
+  const fadeInRightProps = isDesktop
+    ? {
+        variants: fadeIn("right", "tween", 0.2, 0.8),
+      }
+    : {};
+
+  const fadeInLeftProps = isDesktop
+    ? {
+        variants: fadeIn("left", "tween", 0.3, 0.8),
+      }
+    : {};
+
+  const blurUpProps = (delay) =>
+    isDesktop
+      ? {
+          variants: blurUp(delay, 0.8),
+        }
+      : {};
+
+  const imageProps = isDesktop
+    ? {
+        initial: { opacity: 0, scale: 0.95, x: 20 },
+        whileInView: {
+          opacity: 1,
+          scale: 1,
+          x: 0,
+          transition: { duration: 0.8, delay: 0.4 },
+        },
+        viewport: { once: true },
+        whileHover: {
+          scale: 1.03,
+          y: -5,
+          transition: { type: "spring", stiffness: 300, damping: 20 },
+        },
+      }
+    : {};
+
+  const linkProps = isDesktop
+    ? {
+        whileHover: { x: 5, color: "#8bb63a" },
+        transition: { type: "spring", stiffness: 400 },
+      }
+    : {};
+
+  const ctaProps = isDesktop
+    ? {
+        initial: { opacity: 0, y: 20 },
+        whileInView: { opacity: 1, y: 0 },
+        transition: { duration: 0.6, delay: 0.2 },
+        viewport: { once: true },
+        whileHover: { scale: 1.05 },
+        whileTap: { scale: 0.95 },
+      }
+    : {};
+
+  const faqItemProps = (delay) =>
+    isDesktop
+      ? {
+          variants: blurUp(delay, 0.8),
+          whileHover: {
+            x: 10,
+            backgroundColor: "rgba(139, 182, 58, 0.05)",
+            transition: { type: "spring", stiffness: 400 },
+          },
+        }
+      : {};
+
   return (
     <>
       <HeroImage
@@ -16,110 +113,135 @@ const Klimatyzacja = () => {
         desktopImage={heroimgDesktop}
         alt="Klimatyzacja Opole - montaż i serwis systemów split i multi-split"
       >
-        <div className={style.heroImageTextBox}>
+        <MotionDiv className={style.heroImageTextBox} {...heroTextProps}>
           <h1 className={style.heroImageTextBox__title}>Klimatyzacja Opole</h1>
-          <p className={style.heroImageTextBox__text}>
+          <MotionP
+            className={style.heroImageTextBox__text}
+            {...blurUpProps(0.1)}
+          >
             Jesteśmy specjalistami w zakresie klimatyzacji i oferujemy
             kompleksowe usługi montażu, serwisu oraz doradztwa w doborze
             systemów klimatyzacyjnych. Nasza firma posiada niezbędne
             doświadczenie i kwalifikacje do wykonywania prac na najwyższym
             poziomie.
-          </p>
-          <p className={style.heroImageTextBox__text}>
+          </MotionP>
+          <MotionP
+            className={style.heroImageTextBox__text}
+            {...blurUpProps(0.2)}
+          >
             Oferujemy pełen zakres usług związanych z klimatyzacją - od
             doradztwa i projektowania, przez profesjonalny montaż, aż po
             regularny serwis i naprawy gwarancyjne. Zapewniamy komfort termiczny
             przez cały rok.
-          </p>
-          <p className={style.heroImageTextBox__text}>
+          </MotionP>
+          <MotionP
+            className={style.heroImageTextBox__text}
+            {...blurUpProps(0.3)}
+          >
             Specjalizujemy się w systemach klimatyzacji dla domów, biur, sklepów
             oraz obiektów przemysłowych. Dobieramy rozwiązania optymalne pod
             względem efektywności i kosztów eksploatacji.
-          </p>
-          <p className={style.heroImageTextBox__text}>
+          </MotionP>
+          <MotionP
+            className={style.heroImageTextBox__text}
+            {...blurUpProps(0.4)}
+          >
             Montujemy klimatyzację na terenie{" "}
             <strong>Opola, Wrocławia, Kędzierzyna-Koźla, Nysy, Brzegu</strong>{" "}
             oraz całego województwa opolskiego i dolnośląskiego.
-          </p>
-        </div>
+          </MotionP>
+        </MotionDiv>
       </HeroImage>
 
-      <section className={style.headSection}>
-        <div className={style.headSection__textBox}>
+      <MotionSection
+        className={style.headSection}
+        {...sectionProps}
+        {...staggerProps}
+      >
+        <MotionDiv className={style.headSection__textBox} {...fadeInRightProps}>
           <h2 className={style.headSection__title}>
             Zakres usług klimatyzacyjnych
           </h2>
-          <p className={style.headSection__text}>
+          <MotionP className={style.headSection__text} {...blurUpProps(0.1)}>
             <b>Klimatyzacja domowa:</b> Montaż systemów split i multi-split do
             domów jednorodzinnych i mieszkań. Ciche i energooszczędne
             rozwiązania zapewniające komfort przez cały rok.
-          </p>
-          <p className={style.headSection__text}>
+          </MotionP>
+          <MotionP className={style.headSection__text} {...blurUpProps(0.2)}>
             <b>Klimatyzacja biurowa i komercyjna:</b> Kompleksowe systemy dla
             biur, sklepów, restauracji i obiektów usługowych. Projektowanie i
             montaż instalacji dostosowanych do specyficznych potrzeb.
-          </p>
-          <p className={style.headSection__text}>
+          </MotionP>
+          <MotionP className={style.headSection__text} {...blurUpProps(0.3)}>
             <b>Serwis i konserwacja:</b> Regularne przeglądy, czyszczenie,
             doładowanie czynnika chłodniczego oraz naprawy gwarancyjne i
             pogwarancyjne wszystkich marek klimatyzatorów.
-          </p>
-          <p className={style.headSection__text}>
+          </MotionP>
+          <MotionP className={style.headSection__text} {...blurUpProps(0.4)}>
             <b>Systemy współpracujące z fotowoltaiką:</b> Klimatyzatory zasilane
             energią słoneczną dla maksymalnych oszczędności.{" "}
-            <Link
+            <MotionLink
               href="/fotowoltaika"
               aria-label="Przejdź do strony fotowoltaika"
               className={style.headSection__textLink}
+              {...linkProps}
             >
               Sprawdź ofertę fotowoltaiki →
-            </Link>
-          </p>
-          <p className={style.headSection__text}>
+            </MotionLink>
+          </MotionP>
+          <MotionP className={style.headSection__text} {...blurUpProps(0.5)}>
             <b>Pompy ciepła z funkcją chłodzenia:</b> Nowoczesne pompy ciepła
             oferujące zarówno ogrzewanie zimą, jak i chłodzenie latem.{" "}
-            <Link
+            <MotionLink
               href="/pompy_ciepla"
               aria-label="Przejdź do strony pompy ciepła"
               className={style.headSection__textLink}
+              {...linkProps}
             >
               Poznaj pompy ciepła →
-            </Link>
-          </p>
-          <p className={style.headSection__text}>
+            </MotionLink>
+          </MotionP>
+          <MotionP className={style.headSection__text} {...blurUpProps(0.6)}>
             <b>Instalacje elektryczne pod klimatyzację:</b> Profesjonalne
             przyłączenia elektryczne i zabezpieczenia dla systemów klimatyzacji.{" "}
-            <Link
+            <MotionLink
               href="/instalacje_elektryczne"
               aria-label="Przejdź do strony instalacje elektryczne"
               className={style.headSection__textLink}
+              {...linkProps}
             >
               Sprawdź usługi elektryczne →
-            </Link>
-          </p>
-        </div>
-        <div className={style.headSection__imgBox}>
-          <Image
+            </MotionLink>
+          </MotionP>
+        </MotionDiv>
+
+        <MotionDiv className={style.headSection__imgBox} {...fadeInLeftProps}>
+          <MotionImage
             className={style.headSection__img}
             src={klima1}
             alt="Nowoczesna klimatyzacja split - Speed Light Energy Opole"
             width={800}
             height={450}
             priority
+            {...imageProps}
           />
-        </div>
-      </section>
+        </MotionDiv>
+      </MotionSection>
 
-      <section
+      <MotionSection
         className={`${style.headSection} ${style.faqCompact}`}
         aria-labelledby="faq-klima"
+        {...sectionProps}
       >
-        <div className={style.headSection__textBox}>
+        <MotionDiv
+          className={style.headSection__textBox}
+          variants={isDesktop ? fadeIn("up", "tween", 0.2, 0.8) : {}}
+        >
           <h2 id="faq-klima" className={style.headSection__title}>
             Najczęściej zadawane pytania – klimatyzacja
           </h2>
 
-          <div className={style.faq__item}>
+          <MotionDiv className={style.faq__item} {...faqItemProps(0.3)}>
             <details className={style.faq__question}>
               <summary>
                 Ile kosztuje montaż klimatyzacji w mieszkaniu 60m²?
@@ -131,9 +253,9 @@ const Klimatyzacja = () => {
                 skomplikowania instalacji.
               </div>
             </details>
-          </div>
+          </MotionDiv>
 
-          <div className={style.faq__item}>
+          <MotionDiv className={style.faq__item} {...faqItemProps(0.4)}>
             <details className={style.faq__question}>
               <summary>
                 Czy klimatyzacja może współpracować z fotowoltaiką?
@@ -141,17 +263,18 @@ const Klimatyzacja = () => {
               <div className={style.faq__answer}>
                 Tak, to idealne połączenie! Klimatyzacja zasilana energią z
                 fotowoltaiki pozwala na darmowe chłodzenie latem.{" "}
-                <Link
+                <MotionLink
                   href="/fotowoltaika"
                   aria-label="Przejdź do strony fotowoltaika"
+                  {...linkProps}
                 >
                   Sprawdź ofertę fotowoltaiki →
-                </Link>
+                </MotionLink>
               </div>
             </details>
-          </div>
+          </MotionDiv>
 
-          <div className={style.faq__item}>
+          <MotionDiv className={style.faq__item} {...faqItemProps(0.5)}>
             <details className={style.faq__question}>
               <summary>
                 Czy pompa ciepła może chłodzić jak klimatyzacja?
@@ -159,24 +282,30 @@ const Klimatyzacja = () => {
               <div className={style.faq__answer}>
                 Tak, nowoczesne pompy ciepła oferują funkcję chłodzenia
                 aktywnego lub pasywnego, mogąc zastąpić tradycyjną klimatyzację.{" "}
-                <Link
+                <MotionLink
                   href="/pompy_ciepla"
                   aria-label="Przejdź do strony pompy ciepła"
+                  {...linkProps}
                 >
                   Dowiedz się więcej o pompach ciepła →
-                </Link>
+                </MotionLink>
               </div>
             </details>
-          </div>
-        </div>
-      </section>
+          </MotionDiv>
+        </MotionDiv>
+      </MotionSection>
 
-      <div className={style.ctaSection}>
+      <MotionDiv className={style.ctaSection} {...ctaProps}>
         <h3>Zainteresowany klimatyzacją?</h3>
-        <Link href="/kontakt" className={style.ctaButton}>
+        <MotionLink
+          href="/kontakt"
+          className={style.ctaButton}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
           Darmowa wycena w 24h
-        </Link>
-      </div>
+        </MotionLink>
+      </MotionDiv>
     </>
   );
 };

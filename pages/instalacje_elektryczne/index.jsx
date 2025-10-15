@@ -3,7 +3,7 @@ import InstalacjeElektryczne from "@/components/Sections/Offers/InstalacjeElektr
 import { NextSeo } from "next-seo";
 import ServiceSeo from "@/seo/ServiceSeo";
 
-export default function InstalacjeElektrycznePage() {
+export default function InstalacjeElektrycznePage({ isDesktop }) {
   return (
     <>
       <NextSeo
@@ -26,7 +26,19 @@ export default function InstalacjeElektrycznePage() {
         }}
       />
       <ServiceSeo />
-      <InstalacjeElektryczne />
+      <InstalacjeElektryczne isDesktop={isDesktop} />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const isMobile = context.req.headers["user-agent"]
+    .toLowerCase()
+    .includes("mobi");
+
+  return {
+    props: {
+      isDesktop: !isMobile,
+    },
+  };
 }

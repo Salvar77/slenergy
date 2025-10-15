@@ -10,7 +10,7 @@ const OrganizationSeo = () => (
         "@type": "Organization",
         name: "Speed Light Energy",
         description:
-          "Profesjonalny montaż fotowoltaiki w Opolu i okolicach. Montaż w 7 dni, darmowa wycena.",
+          "Profesjonalny montaż fotowoltaiki, pomp ciepła, magazynów energii, instalacji elektrycznych i klimatyzacji w Opolu i okolicach. Montaż w 7 dni, darmowa wycena.",
         url: "https://www.slenergy.pl/",
         logo: "https://www.slenergy.pl/SpeedLightLogo.png",
         address: {

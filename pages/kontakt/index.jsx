@@ -2,7 +2,7 @@ import Contact from "@/components/Sections/Contact/ContactPage";
 import { NextSeo } from "next-seo";
 import ContactSeo from "@/seo/ContactSeo";
 
-export default function KontaktPage() {
+export default function KontaktPage({ isDesktop }) {
   return (
     <>
       <NextSeo
@@ -27,7 +27,19 @@ export default function KontaktPage() {
         }}
       />
       <ContactSeo />
-      <Contact />
+      <Contact isDesktop={isDesktop} />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const isMobile = context.req.headers["user-agent"]
+    .toLowerCase()
+    .includes("mobi");
+
+  return {
+    props: {
+      isDesktop: !isMobile,
+    },
+  };
 }

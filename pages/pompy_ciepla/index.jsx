@@ -2,7 +2,7 @@ import PompyCiepla from "@/components/Sections/Offers/Pompyciepla";
 import { NextSeo } from "next-seo";
 import ServiceSeo from "@/seo/ServiceSeo";
 
-export default function PompyCieplaPage() {
+export default function PompyCieplaPage({ isDesktop }) {
   return (
     <>
       <NextSeo
@@ -26,7 +26,19 @@ export default function PompyCieplaPage() {
         }}
       />
       <ServiceSeo />
-      <PompyCiepla />
+      <PompyCiepla isDesktop={isDesktop} />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const isMobile = context.req.headers["user-agent"]
+    .toLowerCase()
+    .includes("mobi");
+
+  return {
+    props: {
+      isDesktop: !isMobile,
+    },
+  };
 }

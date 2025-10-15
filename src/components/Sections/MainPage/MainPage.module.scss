@@ -58,6 +58,11 @@ $green: #8bb63a;
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
+
+    a {
+      display: inline-block;
+      width: fit-content;
+    }
   }
   &__logo {
     width: clamp(250px, 80vw, 400px);
@@ -66,7 +71,7 @@ $green: #8bb63a;
   &__text {
     font-size: 3rem;
     font-weight: 600;
-    margin: 1rem 0;
+    margin: 1rem 0 !important;
     transition: color 0.3s ease;
     &:hover {
       color: $green;

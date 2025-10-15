@@ -2,7 +2,7 @@ import Klimatyzacja from "@/components/Sections/Offers/Klimatyzacja";
 import { NextSeo } from "next-seo";
 import ServiceSeo from "@/seo/ServiceSeo";
 
-export default function KlimatyzacjaPage() {
+export default function KlimatyzacjaPage({ isDesktop }) {
   return (
     <>
       <NextSeo
@@ -25,7 +25,19 @@ export default function KlimatyzacjaPage() {
         }}
       />
       <ServiceSeo />
-      <Klimatyzacja />
+      <Klimatyzacja isDesktop={isDesktop} />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const isMobile = context.req.headers["user-agent"]
+    .toLowerCase()
+    .includes("mobi");
+
+  return {
+    props: {
+      isDesktop: !isMobile,
+    },
+  };
 }

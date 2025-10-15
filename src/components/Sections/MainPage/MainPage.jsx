@@ -10,88 +10,252 @@ import heatpump from "@/assets/images/heat-pump.png";
 import battery from "@/assets/images/battery.png";
 import solar from "@/assets/images/solar-panel.png";
 import phone from "@/assets/images/phone-call-B.svg";
+import { motion } from "framer-motion";
+import {
+  fadeIn,
+  staggerContainer,
+  textVariant,
+  zoomIn,
+  slideIn,
+  blurUp,
+  revealSlide,
+  cardReveal,
+} from "@/utils/motion";
 
-const MainPage = () => {
+const MotionLink = motion(Link);
+
+const MainPage = ({ isDesktop }) => {
+  const motionProps = {
+    initial: "hidden",
+    animate: "show",
+    viewport: { once: true },
+  };
+
   return (
     <>
       <HeroImage image={heroimg} alt="Panele fotowoltaiczne Opole">
-        <div className={classes.heroImageBoxx}>
-          <Image
-            src={logo}
-            className={classes.heroImageBoxx__logo}
-            alt="Speed Light Energy logo"
-            width={112}
-            height={60}
-            priority
-          />
-          <div
-            className={classes.heroImageBoxx__textbox}
-            aria-label="Skróty do usług"
+        {isDesktop ? (
+          <motion.div
+            className={classes.heroImageBoxx}
+            {...motionProps}
+            variants={staggerContainer(0.1, 0.3)}
           >
-            <Link
-              href="/fotowoltaika"
-              className={classes.heroImageBoxx__text}
-              aria-label="Przejdź do strony fotowoltaika"
+            <motion.div variants={fadeIn("down", "tween", 0.2, 1)}>
+              <Image
+                src={logo}
+                className={classes.heroImageBoxx__logo}
+                alt="Speed Light Energy logo"
+                width={112}
+                height={60}
+                priority
+              />
+            </motion.div>
+
+            <div
+              className={classes.heroImageBoxx__textbox}
+              aria-label="Skróty do usług"
             >
-              Fotowoltaika
-            </Link>
-            <Link
-              href="/pompy_ciepla"
-              className={classes.heroImageBoxx__text}
-              aria-label="Przejdź do strony pompy ciepła"
+              <MotionLink
+                href="/fotowoltaika"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony fotowoltaika"
+                variants={fadeIn("up", "tween", 0.5, 0.8)}
+                initial="hidden"
+                animate="show"
+              >
+                Fotowoltaika
+              </MotionLink>
+              <MotionLink
+                href="/pompy_ciepla"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony pompy ciepła"
+                variants={fadeIn("up", "tween", 0.6, 0.8)}
+                initial="hidden"
+                animate="show"
+              >
+                Pompy ciepła
+              </MotionLink>
+              <MotionLink
+                href="/magazyn_energii"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony magazyny energii"
+                variants={fadeIn("up", "tween", 0.7, 0.8)}
+                initial="hidden"
+                animate="show"
+              >
+                Magazyny energii
+              </MotionLink>
+              <MotionLink
+                href="/klimatyzacja"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony klimatyzacja"
+                variants={fadeIn("up", "tween", 0.8, 0.8)}
+                initial="hidden"
+                animate="show"
+              >
+                Klimatyzacja
+              </MotionLink>
+              <MotionLink
+                href="/instalacje_elektryczne"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony instalacje elektryczne"
+                variants={fadeIn("up", "tween", 0.9, 0.8)}
+                initial="hidden"
+                animate="show"
+              >
+                Instalacje elektryczne
+              </MotionLink>
+            </div>
+          </motion.div>
+        ) : (
+          <div className={classes.heroImageBoxx}>
+            <Image
+              src={logo}
+              className={classes.heroImageBoxx__logo}
+              alt="Speed Light Energy logo"
+              width={112}
+              height={60}
+              priority
+            />
+            <div
+              className={classes.heroImageBoxx__textbox}
+              aria-label="Skróty do usług"
             >
-              Pompy ciepła
-            </Link>
-            <Link
-              href="/magazyn_energii"
-              className={classes.heroImageBoxx__text}
-              aria-label="Przejdź do strony magazyny energii"
-            >
-              Magazyny energii
-            </Link>
-            <Link
-              href="/klimatyzacja"
-              className={classes.heroImageBoxx__text}
-              aria-label="Przejdź do strony klimatyzacja"
-            >
-              Klimatyzacja
-            </Link>
-            <Link
-              href="/instalacje_elektryczne"
-              className={classes.heroImageBoxx__text}
-              aria-label="Przejdź do strony instalacje elektryczne"
-            >
-              Instalacje elektryczne
-            </Link>
+              <Link
+                href="/fotowoltaika"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony fotowoltaika"
+              >
+                Fotowoltaika
+              </Link>
+              <Link
+                href="/pompy_ciepla"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony pompy ciepła"
+              >
+                Pompy ciepła
+              </Link>
+              <Link
+                href="/magazyn_energii"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony magazyny energii"
+              >
+                Magazyny energii
+              </Link>
+              <Link
+                href="/klimatyzacja"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony klimatyzacja"
+              >
+                Klimatyzacja
+              </Link>
+              <Link
+                href="/instalacje_elektryczne"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony instalacje elektryczne"
+              >
+                Instalacje elektryczne
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
       </HeroImage>
-      <section className={classes.headSection}>
-        <div className={classes.headSection__textBox}>
-          <h1 className={classes.headSection__title}>Fotowoltaika Opole</h1>
-          <p className={classes.headSection__text}>
+      <motion.section
+        className={classes.headSection}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={staggerContainer(0.15, 0.1)}
+      >
+        <motion.div
+          className={classes.headSection__textBox}
+          variants={staggerContainer(0.1, 0.2)}
+        >
+          <motion.h1
+            className={classes.headSection__title}
+            variants={revealSlide(0.1, 0.8)}
+          >
+            Fotowoltaika Opole
+          </motion.h1>
+
+          <motion.p
+            className={classes.headSection__text}
+            variants={blurUp(0.2, 0.9)}
+          >
             Firma Speed Light Energy specjalizuje się w kompleksowej instalacji
             systemów fotowoltaicznych, które pozwalają na pozyskiwanie energii
             elektrycznej ze słońca. Oferujemy pełen zakres usług: projekt,
             dostawę materiałów i profesjonalny montaż.
-          </p>
-          <p className={classes.headSection__text}>
+          </motion.p>
+
+          <motion.p
+            className={classes.headSection__text}
+            variants={blurUp(0.3, 0.9)}
+          >
             Montujemy zarówno systemy dla klientów indywidualnych, jak i
             przedsiębiorstw, na terenie województw: opolskiego, śląskiego,
             dolnośląskiego.
-          </p>
-        </div>
-        <div className={classes.headSection__imgBox}>
-          <Image
-            className={classes.headSection__img}
-            src={img2}
-            alt="fotowaltaika, panele słoneczne, opole"
-            title="fotowaltaika, panele słoneczne, opole"
-            width={640}
-            height={360}
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          className={classes.headSection__imgBox}
+          variants={cardReveal(0.4, 1)}
+          whileHover={{
+            scale: 1.03,
+            y: -8,
+            rotateZ: 1,
+            transition: {
+              type: "spring",
+              stiffness: 400,
+              damping: 25,
+            },
+          }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <motion.div
+            whileHover={{
+              boxShadow: "0 20px 40px rgba(139, 182, 58, 0.3)",
+              transition: { duration: 0.3 },
+            }}
+            style={{
+              borderRadius: "12px",
+              overflow: "hidden",
+              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+            }}
+          >
+            <Image
+              className={classes.headSection__img}
+              src={img2}
+              alt="fotowoltaika, panele słoneczne, opole"
+              title="fotowoltaika, panele słoneczne, opole"
+              width={640}
+              height={360}
+            />
+          </motion.div>
+
+          {/* Subtelny efekt świetlny */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{
+              opacity: 0.1,
+              scale: 1,
+              transition: { delay: 0.6, duration: 1 },
+            }}
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              width: "200%",
+              height: "200%",
+              background:
+                "radial-gradient(circle, rgba(139, 182, 58, 0.3) 0%, transparent 70%)",
+              transform: "translate(-50%, -50%)",
+              pointerEvents: "none",
+            }}
           />
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
       <section className={classes.calc} aria-labelledby="calc-heading">
         <h2 id="calc-heading" className={classes.calc__title}>
           Sprawdź potencjalne oszczędności

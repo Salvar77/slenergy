@@ -3,7 +3,7 @@ import { NextSeo } from "next-seo";
 import LocalBusinessSeo from "@/seo/LocalBusinessSeo";
 import FaqSeo from "@/seo/FaqSeo";
 
-export default function Home() {
+export default function Home({ isDesktop }) {
   return (
     <>
       <NextSeo
@@ -37,7 +37,19 @@ export default function Home() {
 
       <LocalBusinessSeo />
       <FaqSeo />
-      <MainPage />
+      <MainPage isDesktop={isDesktop} />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const isMobile = context.req.headers["user-agent"]
+    .toLowerCase()
+    .includes("mobi");
+
+  return {
+    props: {
+      isDesktop: !isMobile,
+    },
+  };
 }
