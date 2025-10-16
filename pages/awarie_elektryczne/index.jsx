@@ -7,15 +7,15 @@ export default function AwarieElektrycznePage({ isDesktop }) {
       <NextSeo
         title="Awarie Elektryczne Opole – pomoc 24/7 | Speed Light Energy"
         description="Pilna naprawa awarii elektrycznych w Opole i okolicach. Interwencja 24/7, weekendy i święta. Szybki dojazd, fachowa pomoc +48 606 337 100."
-        canonical="https://www.slenergy.pl/awarie-elektryczne"
+        canonical="https://www.slenergy.pl/awarie_elektryczne"
         openGraph={{
-          url: "https://www.slenergy.pl/awarie-elektryczne",
+          url: "https://www.slenergy.pl/awarie_elektryczne",
           title: "Awarie Elektryczne Opole – pomoc 24/7 | Speed Light Energy",
           description:
             "Pilna naprawa awarii elektrycznych - interwencja 24/7 w Opole i regionie. Szybki dojazd, fachowa pomoc.",
           images: [
             {
-              url: "https://www.slenergy.pl/awarie-elektryczne.jpg",
+              url: "https://www.slenergy.pl/awaria-elektryczna-small.jpg",
               width: 1200,
               height: 630,
               alt: "Awarie elektryczne Opole - Speed Light Energy",

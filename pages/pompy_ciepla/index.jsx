@@ -10,7 +10,7 @@ export default function PompyCieplaPage({ isDesktop }) {
         description="Montaż pomp ciepła Opole – powietrze-woda od 30 000 zł. Dofinansowanie Czyste Powietrze 45 %, wycena w 24 h, montaż w 7 dni. Gwarancja 10 lat."
         canonical="https://www.slenergy.pl/pompy-ciepla"
         openGraph={{
-          url: "https://www.slenergy.pl/pompy-ciepla",
+          url: "https://www.slenergy.pl/pompy_ciepla",
           title: "Pompy ciepła Opole – montaż od 30 000 zł",
           description:
             "Montaż pomp ciepła powietrze-woda z dofinansowaniem. Wycena w 24 h, montaż w 7 dni.",

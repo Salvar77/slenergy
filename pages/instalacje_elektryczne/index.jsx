@@ -1,7 +1,5 @@
-// pages/instalacje_elektryczne.js
 import InstalacjeElektryczne from "@/components/Sections/Offers/InstalacjeElektryczne";
 import { NextSeo } from "next-seo";
-import ServiceSeo from "@/seo/ServiceSeo";
 
 export default function InstalacjeElektrycznePage({ isDesktop }) {
   return (
@@ -25,7 +23,6 @@ export default function InstalacjeElektrycznePage({ isDesktop }) {
           ],
         }}
       />
-      <ServiceSeo />
       <InstalacjeElektryczne isDesktop={isDesktop} />
     </>
   );
