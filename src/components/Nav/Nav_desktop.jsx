@@ -8,7 +8,7 @@ const Nav_desktop = () => {
     <div className={classes.nav_container}>
       <div className={classes.nav_logo}>
         <Link href="/">
-          <Image src={logo} alt="logo" width={300} />'
+          <Image src={logo} alt="Logo Speed Light Energy" width={300} />'
         </Link>
       </div>
       <ul className={classes.nav_links_desktop}>
@@ -29,6 +29,12 @@ const Nav_desktop = () => {
             </li>
             <li>
               <Link href="/instalacje_elektryczne">Instalacje elektryczne</Link>
+            </li>
+            <li>
+              <Link href="/awarie_elektryczne">Awarie elektryczne</Link>
+            </li>
+            <li>
+              <Link href="/naprawa_dachow">Naprawa Dachów</Link>
             </li>
           </ul>
         </li>

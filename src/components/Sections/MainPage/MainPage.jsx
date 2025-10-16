@@ -105,6 +105,26 @@ const MainPage = ({ isDesktop }) => {
               >
                 Instalacje elektryczne
               </MotionLink>
+              <MotionLink
+                href="/instalacje_elektryczne"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony awarie elektryczne"
+                variants={fadeIn("up", "tween", 1.0, 0.8)}
+                initial="hidden"
+                animate="show"
+              >
+                Awarie elektryczne
+              </MotionLink>
+              <MotionLink
+                href="/instalacje_elektryczne"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony naprawa dachów"
+                variants={fadeIn("up", "tween", 1.1, 0.8)}
+                initial="hidden"
+                animate="show"
+              >
+                Naprawa Dachów
+              </MotionLink>
             </div>
           </motion.div>
         ) : (
@@ -142,13 +162,7 @@ const MainPage = ({ isDesktop }) => {
               >
                 Magazyny energii
               </Link>
-              <Link
-                href="/klimatyzacja"
-                className={classes.heroImageBoxx__text}
-                aria-label="Przejdź do strony klimatyzacja"
-              >
-                Klimatyzacja
-              </Link>
+
               <Link
                 href="/instalacje_elektryczne"
                 className={classes.heroImageBoxx__text}
@@ -156,6 +170,20 @@ const MainPage = ({ isDesktop }) => {
               >
                 Instalacje elektryczne
               </Link>
+              <MotionLink
+                href="/instalacje_elektryczne"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony awarie elektryczne"
+              >
+                Awarie elektryczne
+              </MotionLink>
+              <MotionLink
+                href="/instalacje_elektryczne"
+                className={classes.heroImageBoxx__text}
+                aria-label="Przejdź do strony naprawa dachów"
+              >
+                Naprawa Dachów
+              </MotionLink>
             </div>
           </div>
         )}

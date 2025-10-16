@@ -16,7 +16,7 @@ const Nav_mobile = () => {
       <div className={classes.nav_container}>
         <div className={classes.nav_logo}>
           <Link href="/">
-            <Image src={logo} alt="logo" width={200} />
+            <Image src={logo} alt="Logo Speed Light Energy" width={200} />
           </Link>
         </div>
         <Hamburger onClick={toggleNav} isActive={isActive} />
@@ -58,6 +58,16 @@ const Nav_mobile = () => {
                 <li className={classes.nav_mobile__link}>
                   <Link onClick={toggleNav} href="/instalacje_elektryczne">
                     Instalacje elektryczne
+                  </Link>
+                </li>
+                <li className={classes.nav_mobile__link}>
+                  <Link onClick={toggleNav} href="/awarie_elektryczne">
+                    Awarie elektryczne
+                  </Link>
+                </li>
+                <li className={classes.nav_mobile__link}>
+                  <Link onClick={toggleNav} href="/naprawa_dachow">
+                    Naprawa Dachów
                   </Link>
                 </li>
                 <li className={classes.nav_mobile__link}>
