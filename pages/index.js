@@ -8,14 +8,14 @@ export default function Home({ isDesktop }) {
     <>
       <NextSeo
         title="Fotowoltaika Opole 2025 - Panele, Pompy Ciepła, Magazyny Energii"
-        description="Speed Light Energy – montaż paneli fotowoltaicznych, pomp ciepła, magazynów energii, klimatyzacji i instalacji elektrycznych."
+        description="Speed Light Energy – lider w instalacjach OZE: fotowoltaika, pompy ciepła, magazyny energii. Oferujemy również usługi elektryczne i dekarskie."
         canonical="https://www.slenergy.pl/"
         openGraph={{
           url: "https://www.slenergy.pl/",
           title:
             "Fotowoltaika Opole 2025 - Kompleksowe Instalacje Energetyczne",
           description:
-            "Profesjonalny montaż paneli fotowoltaicznych, pomp ciepła, magazynów energii i instalacji elektrycznych. Korzystaj z dofinansowania do 30 000 zł.",
+            "Kompleksowe instalacje OZE w Opole: fotowoltaika, pompy ciepła, magazyny energii. Profesjonalny montaż klimatyzacji, instalacji elektrycznych i usług dekarskich.",
           images: [
             {
               url: "https://www.slenergy.pl/SpeedLightLogo.png",

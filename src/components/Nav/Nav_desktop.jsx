@@ -34,7 +34,7 @@ const Nav_desktop = () => {
               <Link href="/awarie_elektryczne">Awarie elektryczne</Link>
             </li>
             <li>
-              <Link href="/naprawa_dachow">Naprawa Dachów</Link>
+              <Link href="/awarie_dekarskie">Awarie dekarskie</Link>
             </li>
           </ul>
         </li>

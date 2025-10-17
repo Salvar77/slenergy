@@ -2,12 +2,12 @@ import HeroImage from "@/components/HeroImage/HeroImage";
 import style from "@/styles/HeroImage.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import heroimg from "@/assets/images/naprawa-dachu-big.jpg";
-import dach1 from "@/assets/images/naprawa-dachu-small-2.jpg";
+import heroimg from "@/assets/images/awaria-dekarska-big.jpg";
+import dach1 from "@/assets/images/awaria-dekarska-small-2.jpg";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, blurUp } from "@/utils/motion";
 
-const NaprawaDachow = ({ isDesktop }) => {
+const AwarieDekarskie = ({ isDesktop }) => {
   const MotionDiv = isDesktop ? motion.div : "div";
   const MotionP = isDesktop ? motion.p : "p";
   const MotionSection = isDesktop ? motion.section : "section";
@@ -93,23 +93,36 @@ const NaprawaDachow = ({ isDesktop }) => {
     <>
       <HeroImage
         image={heroimg}
-        alt="Naprawa dachów Opole - profesjonalne usługi dekarskie"
+        alt="Awarie dekarskie Opole - profesjonalne usługi dekarskie"
       >
         <MotionDiv className={style.heroImageTextBox} {...heroTextProps}>
           <h1 className={style.heroImageTextBox__title}>
-            Naprawa Dachów Opole
+            Awarie Dekarskie Opole
           </h1>
           <MotionP
             className={style.heroImageTextBox__text}
             {...blurUpProps(0.1)}
           >
-            Specjalizujemy się w profesjonalnych naprawach i renowacjach dachów
-            wszystkich typów. Nasze usługi dekarskie obejmują zarówno drobne
-            naprawy, jak i kompleksowe remonty pokryć dachowych.
+            Awarie dekarskie obejmują wszelkiego rodzaju usterki związane z
+            pokryciem dachowym oraz innymi elementami dachu, które mogą
+            prowadzić do przecieków i uszkodzeń budynku. Najczęściej są to
+            problemy wynikające z błędów wykonawczych, uszkodzeń spowodowanych
+            przez warunki atmosferyczne (np. silne wiatry, burze, śnieg czy
+            mróz), naturalne zużycie materiałów oraz brak odpowiedniej
+            konserwacji.
           </MotionP>
           <MotionP
             className={style.heroImageTextBox__text}
             {...blurUpProps(0.2)}
+          >
+            Specjalizujemy się w profesjonalnym usuwaniu awarii dekarskich i
+            renowacjach dachów wszystkich typów. Nasze usługi obejmują zarówno
+            szybką interwencję przy awariach, jak i kompleksowe naprawy pokryć
+            dachowych.
+          </MotionP>
+          <MotionP
+            className={style.heroImageTextBox__text}
+            {...blurUpProps(0.3)}
           >
             Doświadczony zespół dekarski gwarantuje najwyższą jakość wykonania
             oraz trwałość napraw. Korzystamy wyłącznie z materiałów od
@@ -118,14 +131,14 @@ const NaprawaDachow = ({ isDesktop }) => {
           </MotionP>
           <MotionP
             className={style.heroImageTextBox__text}
-            {...blurUpProps(0.3)}
+            {...blurUpProps(0.4)}
           >
             Oferujemy bezpłatne doradztwo i wycenę, a także gwarancję na
             wszystkie wykonane przez nas prace dekarskie.
           </MotionP>
           <MotionP
             className={style.heroImageTextBox__text}
-            {...blurUpProps(0.4)}
+            {...blurUpProps(0.5)}
           >
             Działamy na terenie{" "}
             <strong>Opola, Wrocławia, Kędzierzyna-Koźla, Nysy, Brzegu</strong>{" "}
@@ -140,23 +153,58 @@ const NaprawaDachow = ({ isDesktop }) => {
         {...staggerProps}
       >
         <MotionDiv className={style.headSection__textBox} {...fadeInRightProps}>
-          <h2 className={style.headSection__title}>Zakres usług dekarskich</h2>
+          <h2 className={style.headSection__title}>
+            Rodzaje awarii dekarskich
+          </h2>
+
           <MotionP className={style.headSection__text} {...blurUpProps(0.1)}>
+            <b>Przecieki dachu</b> – jeden z najbardziej powszechnych problemów,
+            który może wystąpić w wyniku uszkodzeń pokrycia dachowego, takich
+            jak pęknięcia dachówek, uszkodzenie membrany dachowej, czy
+            nieszczelności w miejscach łączeń elementów dachu (np. kominów,
+            okien dachowych, rynien).
+          </MotionP>
+
+          <MotionP className={style.headSection__text} {...blurUpProps(0.2)}>
+            <b>Zawilgocenie i pleśń</b> – wilgoć w strukturze dachu może
+            prowadzić do pojawienia się pleśni i grzybów w pomieszczeniach
+            poddasza, a także na samym dachu. Jest to jeden z pierwszych
+            sygnałów, że coś jest nie tak z pokryciem dachu.
+          </MotionP>
+
+          <MotionP className={style.headSection__text} {...blurUpProps(0.3)}>
+            <b>Zniszczenie warstwy termoizolacyjnej</b> – nadmierne nasiąknięcie
+            wodą może spowodować, że warstwa termoizolacyjna przestanie pełnić
+            swoją funkcję, co może prowadzić do wyższych kosztów ogrzewania i
+            osłabienia struktury dachu.
+          </MotionP>
+
+          <MotionP className={style.headSection__text} {...blurUpProps(0.4)}>
+            <b>Uszkodzenia konstrukcji dachu</b> – w wyniku długotrwałych
+            przecieków woda może powodować uszkodzenia w drewnie i innych
+            materiałach budowlanych, a także prowadzić do korozji elementów
+            metalowych, co w efekcie może zagrażać stabilności całego dachu.
+          </MotionP>
+
+          <MotionP className={style.headSection__text} {...blurUpProps(0.5)}>
             <b>Naprawa uszkodzeń dachów:</b> Likwidacja przecieków, wymiana
             uszkodzonych elementów pokrycia, naprawa konstrukcji dachowych po
             wichurach i opadach atmosferycznych.
           </MotionP>
-          <MotionP className={style.headSection__text} {...blurUpProps(0.2)}>
+
+          <MotionP className={style.headSection__text} {...blurUpProps(0.6)}>
             <b>Wymiana pokryć dachowych:</b> Kompleksowa wymiana dachówek,
             blachodachówki, papy oraz innych materiałów pokryciowych z
             zachowaniem najwyższych standardów wykonawczych.
           </MotionP>
-          <MotionP className={style.headSection__text} {...blurUpProps(0.3)}>
+
+          <MotionP className={style.headSection__text} {...blurUpProps(0.7)}>
             <b>Montaż i naprawa systemów rynnowych:</b> Instalacja nowych rynien
             i rur spustowych, udrażnianie istniejących systemów, naprawa
             uszkodzeń.
           </MotionP>
-          <MotionP className={style.headSection__text} {...blurUpProps(0.4)}>
+
+          <MotionP className={style.headSection__text} {...blurUpProps(0.8)}>
             <b>Przygotowanie dachów pod fotowoltaikę:</b> Wzmocnienie
             konstrukcji, naprawa pokrycia przed montażem paneli
             fotowoltaicznych.{" "}
@@ -169,24 +217,27 @@ const NaprawaDachow = ({ isDesktop }) => {
               Sprawdź ofertę fotowoltaiki →
             </MotionLink>
           </MotionP>
-          <MotionP className={style.headSection__text} {...blurUpProps(0.5)}>
+
+          <MotionP className={style.headSection__text} {...blurUpProps(0.9)}>
             <b>Izolacje i ocieplenia dachów:</b> Montaż wełny mineralnej, folii
             paroizolacyjnych, poprawa szczelności i termoizolacji poddaszy.{" "}
             <MotionLink
-              href="/docieplenia"
-              aria-label="Przejdź do strony docieplenia"
+              href="/izolacje"
+              aria-label="Przejdź do strony izolacje"
               className={style.headSection__textLink}
               {...linkProps}
             >
-              Dowiedz się o dociepleniach →
+              Dowiedz się więcej o izolacjach →
             </MotionLink>
           </MotionP>
-          <MotionP className={style.headSection__text} {...blurUpProps(0.6)}>
+
+          <MotionP className={style.headSection__text} {...blurUpProps(1.0)}>
             <b>Konserwacja i impregnacja:</b> Zabezpieczanie drewnianych
             elementów konstrukcyjnych, impregnowanie dachówek ceramicznych i
             cementowych.
           </MotionP>
-          <MotionP className={style.headSection__text} {...blurUpProps(0.7)}>
+
+          <MotionP className={style.headSection__text} {...blurUpProps(1.1)}>
             <b>Montaż systemów przeciwoblodzeniowych:</b> Instalacja kabli
             grzejnych na dachach i w rynnach zapobiegająca tworzeniu się sopli i
             zalodzeniu.{" "}
@@ -199,13 +250,26 @@ const NaprawaDachow = ({ isDesktop }) => {
               Sprawdź usługi elektryczne →
             </MotionLink>
           </MotionP>
+
+          <MotionP className={style.headSection__text} {...blurUpProps(1.2)}>
+            <b>Usuwanie skutków zalania:</b> Kompleksowe osuszanie poddaszy,
+            usuwanie wilgoci i naprawa uszkodzeń spowodowanych przez wodę.{" "}
+            <MotionLink
+              href="/awarie_budowlane"
+              aria-label="Przejdź do strony awarie budowlane"
+              className={style.headSection__textLink}
+              {...linkProps}
+            >
+              Sprawdź usługi budowlane →
+            </MotionLink>
+          </MotionP>
         </MotionDiv>
 
         <MotionDiv className={style.headSection__imgBox} {...fadeInLeftProps}>
           <MotionImage
             className={style.headSection__img}
             src={dach1}
-            alt="Profesjonalna naprawa dachu - Speed Light Energy Opole"
+            alt="Profesjonalne usuwanie awarii dekarskich - Speed Light Energy Opole"
             width={800}
             height={450}
             priority
@@ -224,7 +288,7 @@ const NaprawaDachow = ({ isDesktop }) => {
           variants={isDesktop ? fadeIn("up", "tween", 0.2, 0.8) : {}}
         >
           <h2 id="faq-dachy" className={style.headSection__title}>
-            Najczęściej zadawane pytania – naprawa dachów
+            Najczęściej zadawane pytania – awarie dekarskie
           </h2>
 
           <MotionDiv
@@ -237,11 +301,11 @@ const NaprawaDachow = ({ isDesktop }) => {
             }}
           >
             <details className={style.faq__question}>
-              <summary>Ile kosztuje naprawa przeciekającego dachu?</summary>
+              <summary>Ile kosztuje usunięcie awarii dekarskiej?</summary>
               <div className={style.faq__answer}>
-                Koszt naprawy zależy od zakresu uszkodzeń i rodzaju pokrycia.
-                Drobne naprawy zaczynają się od 500 zł, natomiast większe
-                remonty od 2000 zł. Oferujemy bezpłatną wycenę.{" "}
+                Koszt usunięcia awarii zależy od zakresu uszkodzeń i rodzaju
+                pokrycia. Drobne naprawy zaczynają się od 500 zł, natomiast
+                większe remonty od 2000 zł. Oferujemy bezpłatną wycenę.{" "}
                 <MotionLink
                   href="/kontakt"
                   aria-label="Skontaktuj się z nami"
@@ -263,11 +327,12 @@ const NaprawaDachow = ({ isDesktop }) => {
             }}
           >
             <details className={style.faq__question}>
-              <summary>Czy naprawiacie dachy po wichurach?</summary>
+              <summary>Czy usuwacie awarie dachów po wichurach?</summary>
               <div className={style.faq__answer}>
-                Tak, specjalizujemy się w naprawach dachów uszkodzonych przez
-                wichury, gradobicia i inne zjawiska atmosferyczne. Działamy
-                szybko, zabezpieczając dach przed dalszymi zniszczeniami.{" "}
+                Tak, specjalizujemy się w usuwaniu awarii dachów uszkodzonych
+                przez wichury, gradobicia i inne zjawiska atmosferyczne.
+                Działamy szybko, zabezpieczając dach przed dalszymi
+                zniszczeniami.{" "}
                 <MotionLink
                   href="/awarie_elektryczne"
                   aria-label="Przejdź do strony awarie elektryczne"
@@ -289,11 +354,11 @@ const NaprawaDachow = ({ isDesktop }) => {
             }}
           >
             <details className={style.faq__question}>
-              <summary>Jak długo trwa typowa naprawa dachu?</summary>
+              <summary>Jak długo trwa usunięcie awarii dekarskiej?</summary>
               <div className={style.faq__answer}>
-                Drobne naprawy wykonujemy w 1 dzień. Większe remonty trwają od 2
-                do 5 dni w zależności od skali prac i warunków atmosferycznych.
-                Dążymy do minimalizacji czasu trwania prac.
+                Drobne awarie usuwamy w 1 dzień. Większe naprawy trwają od 2 do
+                5 dni w zależności od skali uszkodzeń i warunków
+                atmosferycznych. Dążymy do minimalizacji czasu trwania prac.
               </div>
             </details>
           </MotionDiv>
@@ -352,18 +417,18 @@ const NaprawaDachow = ({ isDesktop }) => {
       </MotionSection>
 
       <MotionDiv className={style.ctaSection} {...ctaProps}>
-        <h3>Potrzebujesz pomocy z dachem?</h3>
+        <h3>Masz awarię dachu? Działamy szybko!</h3>
         <MotionLink
           href="/kontakt"
           className={style.ctaButton}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Darmowa wycena naprawy
+          Pilna interwencja dekarska
         </MotionLink>
       </MotionDiv>
     </>
   );
 };
 
-export default NaprawaDachow;
+export default AwarieDekarskie;

@@ -14,9 +14,6 @@ import { motion } from "framer-motion";
 import {
   fadeIn,
   staggerContainer,
-  textVariant,
-  zoomIn,
-  slideIn,
   blurUp,
   revealSlide,
   cardReveal,
@@ -106,7 +103,7 @@ const MainPage = ({ isDesktop }) => {
                 Instalacje elektryczne
               </MotionLink>
               <MotionLink
-                href="/instalacje_elektryczne"
+                href="/awarie_elektryczne"
                 className={classes.heroImageBoxx__text}
                 aria-label="Przejdź do strony awarie elektryczne"
                 variants={fadeIn("up", "tween", 1.0, 0.8)}
@@ -116,14 +113,14 @@ const MainPage = ({ isDesktop }) => {
                 Awarie elektryczne
               </MotionLink>
               <MotionLink
-                href="/instalacje_elektryczne"
+                href="/awarie_dekarskie"
                 className={classes.heroImageBoxx__text}
                 aria-label="Przejdź do strony naprawa dachów"
                 variants={fadeIn("up", "tween", 1.1, 0.8)}
                 initial="hidden"
                 animate="show"
               >
-                Naprawa Dachów
+                Awarie dekarskie
               </MotionLink>
             </div>
           </motion.div>
@@ -171,18 +168,18 @@ const MainPage = ({ isDesktop }) => {
                 Instalacje elektryczne
               </Link>
               <MotionLink
-                href="/instalacje_elektryczne"
+                href="/awarie_elektryczne"
                 className={classes.heroImageBoxx__text}
                 aria-label="Przejdź do strony awarie elektryczne"
               >
                 Awarie elektryczne
               </MotionLink>
               <MotionLink
-                href="/instalacje_elektryczne"
+                href="/awarie_dekarskie"
                 className={classes.heroImageBoxx__text}
                 aria-label="Przejdź do strony naprawa dachów"
               >
-                Naprawa Dachów
+                Awarie dekarskie
               </MotionLink>
             </div>
           </div>
@@ -379,6 +376,15 @@ const MainPage = ({ isDesktop }) => {
           obejmują profesjonalny montaż, demontaż, przenoszenie i naprawę
           systemów fotowoltaicznych.
         </p>
+        <br />
+        <p>
+          <strong>
+            Specjalizujemy się również w kompleksowym i profesjonalnym
+            diagnozowaniu oraz naprawianiu wszelkich usterek elektrycznych i
+            dekarskich, oferując usługi najwyższej jakości.
+          </strong>
+        </p>
+
         <div className={classes.contactCta}>
           <Link
             href="tel:+48606337100"

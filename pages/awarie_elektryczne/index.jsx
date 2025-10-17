@@ -1,4 +1,5 @@
 import AwarieElektryczne from "@/components/Sections/Offers/AwarieElektryczne";
+import AwarieElektryczneSeo from "@/seo/AwarieElektryczneSeo";
 import { NextSeo } from "next-seo";
 
 export default function AwarieElektrycznePage({ isDesktop }) {
@@ -23,6 +24,7 @@ export default function AwarieElektrycznePage({ isDesktop }) {
           ],
         }}
       />
+      <AwarieElektryczneSeo />
       <AwarieElektryczne isDesktop={isDesktop} />
     </>
   );

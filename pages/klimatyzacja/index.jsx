@@ -1,6 +1,6 @@
 import Klimatyzacja from "@/components/Sections/Offers/Klimatyzacja";
+import KlimatyzacjaSeo from "@/seo/KlimatyzacjaSeo";
 import { NextSeo } from "next-seo";
-import ServiceSeo from "@/seo/ServiceSeo";
 
 export default function KlimatyzacjaPage({ isDesktop }) {
   return (
@@ -24,7 +24,7 @@ export default function KlimatyzacjaPage({ isDesktop }) {
           ],
         }}
       />
-      <ServiceSeo />
+      <KlimatyzacjaSeo />
       <Klimatyzacja isDesktop={isDesktop} />
     </>
   );

@@ -66,8 +66,8 @@ const Nav_mobile = () => {
                   </Link>
                 </li>
                 <li className={classes.nav_mobile__link}>
-                  <Link onClick={toggleNav} href="/naprawa_dachow">
-                    Naprawa Dachów
+                  <Link onClick={toggleNav} href="/awarie_dekarskie">
+                    Awarie dekarskie
                   </Link>
                 </li>
                 <li className={classes.nav_mobile__link}>
