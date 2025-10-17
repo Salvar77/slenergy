@@ -260,3 +260,55 @@ $gold-color: #a8800e;
   border-radius: 8px;
   font-style: italic;
 }
+
+.privacySection {
+  margin: 25px 0;
+  padding: 20px;
+  background: rgba(139, 182, 58, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid #8bb63a;
+}
+
+.privacyLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.privacyCheckbox {
+  width: 22px;
+  height: 22px;
+  margin-top: 3px;
+  accent-color: #8bb63a;
+  flex-shrink: 0;
+}
+
+.privacyText {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.privacyLink {
+  color: #8bb63a;
+  font-weight: 600;
+  text-decoration: underline;
+
+  &:hover {
+    color: #7aa532;
+  }
+}
+
+@media (max-width: 768px) {
+  .privacyLabel {
+    font-size: 1.3rem;
+  }
+
+  .privacyText {
+    font-size: 1.3rem;
+  }
+}

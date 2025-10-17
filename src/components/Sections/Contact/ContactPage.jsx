@@ -43,14 +43,12 @@ const Contact = ({ isDesktop }) => {
       );
   };
 
-  // Motion components conditionally
   const MotionDiv = isDesktop ? motion.div : "div";
   const MotionForm = isDesktop ? motion.form : "form";
   const MotionSpan = isDesktop ? motion.span : "span";
   const MotionButton = isDesktop ? motion.button : "button";
   const MotionP = isDesktop ? motion.p : "p";
 
-  // Motion props conditionally
   const heroImageProps = isDesktop
     ? {
         initial: { opacity: 0, y: 20 },
@@ -234,6 +232,26 @@ const Contact = ({ isDesktop }) => {
             onChange={(e) => setEnteredMessage(e.target.value)}
             required
           />
+          <div className={classes.privacySection}>
+            <label className={classes.privacyLabel}>
+              <input
+                type="checkbox"
+                required
+                className={classes.privacyCheckbox}
+                name="privacy_policy"
+              />
+              <span className={classes.privacyText}>
+                * Akceptuję{" "}
+                <Link
+                  href="/polityka-prywatnosci"
+                  className={classes.privacyLink}
+                >
+                  politykę prywatności
+                </Link>{" "}
+                i wyrażam zgodę na przetwarzanie moich danych osobowych
+              </span>
+            </label>
+          </div>
           <MotionButton
             className={classes.contact__form__button}
             type="submit"

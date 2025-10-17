@@ -106,6 +106,12 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Speed Light Energy. Wszelkie prawa
             zastrzeżone.
           </p>
+          <br />
+          <div className={classes.legalLinks}>
+            <Link href="/polityka-prywatnosci" className={classes.legalLink}>
+              Polityka Prywatności
+            </Link>
+          </div>
         </div>
       </footer>
 
