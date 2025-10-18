@@ -24,8 +24,19 @@ const ServiceSeo = () => (
             postalCode: "45-586",
             addressCountry: "PL",
           },
+
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: 4.9,
+            reviewCount: 67,
+            bestRating: 5,
+            worstRating: 1,
+          },
         },
-        areaServed: { "@type": "AdministrativeArea", name: "Opole, Polska" },
+        areaServed: {
+          "@type": "AdministrativeArea",
+          name: "Opole, Polska",
+        },
         offers: {
           "@type": "Offer",
           url: "https://www.slenergy.pl/pompy_ciepla",
@@ -67,13 +78,6 @@ const ServiceSeo = () => (
             value: "8-12 kW",
           },
         ],
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: 4.9,
-          reviewCount: 67,
-          bestRating: 5,
-          worstRating: 1,
-        },
       }),
     }}
   />
